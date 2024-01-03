@@ -1,0 +1,18 @@
+/home/arnab22/.conda/envs/bst/lib/python3.11/site-packages/pyscf/dft/libxc.py:771: UserWarning: Since PySCF-2.3, B3LYP (and B3P86) are changed to the VWN-RPA variant, corresponding to the original definition by Stephens et al. (issue 1480) and the same as the B3LYP functional in Gaussian. To restore the VWN5 definition, you can put the setting "B3LYP_WITH_VWN5 = True" in pyscf_conf.py
+  warnings.warn('Since PySCF-2.3, B3LYP (and B3P86) are changed to the VWN-RPA variant, '
+IDX001:DIM4096:001|002|003|004|005|006|
+IDX002:DIM4096:007|008|009|010|011|012|
+IDX003:DIM4096:013|014|015|016|017|018|
+IDX004:DIM4096:019|020|021|022|023|024|
+ Solve OO-CMF with newton
+Overwritten attributes  conv_tol_residual  of <class 'pyscf.fci.direct_spin1.FCISolver'>
+ Step:    1 E: -919.545755088494 G:     4.62e-01  
+ Step:    2 E: -919.615959939282 G:     6.21e-03  
+ Step:    3 E: -919.615983444820 G:     3.22e-04  
+ Step:    4 E: -919.615983578891 G:     3.94e-05  
+ Step:    5 E: -919.615983581568 G:     5.25e-06  
+ Step:    6 E: -919.615983581624 G:     7.28e-07  
+ Step:    7 E: -919.615983581623 G:     1.03e-07  
+ Step:    8 E: -919.615983581624 G:     1.47e-08  
+Parsing benz-4-meta-fcidump
+ Step:    9 E: -919.615983581625 G:     2.11e-09   

@@ -1,0 +1,18 @@
+tc247
+Resetting modules to system default. Reseting $MODULEPATH back to system default. All extra directories will be removed from $MODULEPATH.
+Usage: sbatch submit.sh {input file} {data file} {data file}
+benz-4-p3-cmf.jl
+benz-4-p3-cmf.jl.out
+/home/arnab22/SPF-data/P3
+/localscratch/1918767
+sending incremental file list
+benz-4-p3-cmf.jl.out
+
+sent 123 bytes  received 35 bytes  316.00 bytes/sec
+total size is 0  speedup is 0.00
+sending incremental file list
+benz-4-p3-cmf.jl.out
+
+sent 606 bytes  received 35 bytes  1,282.00 bytes/sec
+total size is 478  speedup is 0.75
+rm: cannot remove ‘tmpfs’: Device or resource busy

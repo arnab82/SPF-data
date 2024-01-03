@@ -1,0 +1,38 @@
+tc219
+Resetting modules to system default. Reseting $MODULEPATH back to system default. All extra directories will be removed from $MODULEPATH.
+Usage: sbatch submit.sh {input file} {data file} {data file}
+qdphenyl-spf.jl
+qdphenyl-spf.jl.out
+/home/arnab22/SPF-data/P4
+/localscratch/1915638
+sending incremental file list
+qdphenyl-spf.jl.out
+
+sent 122 bytes  received 35 bytes  314.00 bytes/sec
+total size is 0  speedup is 0.00
+sending incremental file list
+qdphenyl-spf.jl.out
+
+sent 605 bytes  received 35 bytes  1,280.00 bytes/sec
+total size is 478  speedup is 0.75
+sending incremental file list
+qdphenyl-spf.jl.out
+
+sent 1,869 bytes  received 35 bytes  3,808.00 bytes/sec
+total size is 1,743  speedup is 0.92
+sending incremental file list
+qdphenyl-spf.jl.out
+
+sent 3,468 bytes  received 35 bytes  7,006.00 bytes/sec
+total size is 3,341  speedup is 0.95
+sending incremental file list
+qdphenyl-spf.jl.out
+
+sent 7,893 bytes  received 35 bytes  15,856.00 bytes/sec
+total size is 7,766  speedup is 0.98
+sending incremental file list
+qdphenyl-spf.jl.out
+
+sent 12,153 bytes  received 35 bytes  24,376.00 bytes/sec
+total size is 12,026  speedup is 0.99
+rm: cannot remove ‘tmpfs’: Device or resource busy

@@ -1,0 +1,1000 @@
+tc133
+Resetting modules to system default. Reseting $MODULEPATH back to system default. All extra directories will be removed from $MODULEPATH.
+Usage: sbatch submit.sh {input file} {data file} {data file}
+benz-p1_spf2.jl
+benz-p1_spf2.jl.out
+/home/arnab22/SPF-data/P1
+/localscratch/1913669
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 123 bytes  received 35 bytes  316.00 bytes/sec
+total size is 0  speedup is 0.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 605 bytes  received 35 bytes  1,280.00 bytes/sec
+total size is 478  speedup is 0.75
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 1,512 bytes  received 35 bytes  3,094.00 bytes/sec
+total size is 1,386  speedup is 0.90
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 2,073 bytes  received 35 bytes  4,216.00 bytes/sec
+total size is 1,946  speedup is 0.92
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 10,104 bytes  received 35 bytes  20,278.00 bytes/sec
+total size is 9,977  speedup is 0.98
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 15,959 bytes  received 35 bytes  31,988.00 bytes/sec
+total size is 15,832  speedup is 0.99
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 15,832  speedup is 172.09
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 19,266 bytes  received 35 bytes  38,602.00 bytes/sec
+total size is 19,139  speedup is 0.99
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 21,296 bytes  received 35 bytes  42,662.00 bytes/sec
+total size is 21,169  speedup is 0.99
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 22,206 bytes  received 35 bytes  14,827.33 bytes/sec
+total size is 22,079  speedup is 0.99
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 23,403 bytes  received 35 bytes  46,876.00 bytes/sec
+total size is 23,276  speedup is 0.99
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 23,777 bytes  received 35 bytes  47,624.00 bytes/sec
+total size is 23,650  speedup is 0.99
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 26,049 bytes  received 35 bytes  52,168.00 bytes/sec
+total size is 25,922  speedup is 0.99
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 28,463 bytes  received 35 bytes  56,996.00 bytes/sec
+total size is 28,336  speedup is 0.99
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 31,565 bytes  received 35 bytes  63,200.00 bytes/sec
+total size is 31,438  speedup is 0.99
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 31,888 bytes  received 35 bytes  63,846.00 bytes/sec
+total size is 31,761  speedup is 0.99
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 31,761  speedup is 345.23
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 31,761  speedup is 345.23
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 32,842 bytes  received 35 bytes  65,754.00 bytes/sec
+total size is 32,716  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 34,043 bytes  received 35 bytes  68,156.00 bytes/sec
+total size is 33,913  speedup is 1.00
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 33,913  speedup is 372.67
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 34,963 bytes  received 35 bytes  69,996.00 bytes/sec
+total size is 34,832  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 36,241 bytes  received 35 bytes  72,552.00 bytes/sec
+total size is 36,110  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 37,661 bytes  received 35 bytes  75,392.00 bytes/sec
+total size is 37,530  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 39,080 bytes  received 35 bytes  78,230.00 bytes/sec
+total size is 38,950  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 40,359 bytes  received 35 bytes  80,788.00 bytes/sec
+total size is 40,228  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 42,182 bytes  received 35 bytes  84,434.00 bytes/sec
+total size is 42,052  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 42,504 bytes  received 35 bytes  85,078.00 bytes/sec
+total size is 42,373  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 42,373  speedup is 460.58
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 42,373  speedup is 460.58
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 43,440 bytes  received 35 bytes  86,950.00 bytes/sec
+total size is 43,310  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 43,502 bytes  received 35 bytes  87,074.00 bytes/sec
+total size is 43,372  speedup is 1.00
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 43,372  speedup is 476.62
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 44,699 bytes  received 35 bytes  89,468.00 bytes/sec
+total size is 44,569  speedup is 1.00
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 44,569  speedup is 489.77
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 44,569  speedup is 489.77
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 45,604 bytes  received 35 bytes  91,278.00 bytes/sec
+total size is 45,473  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 46,597 bytes  received 35 bytes  93,264.00 bytes/sec
+total size is 46,467  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 47,734 bytes  received 35 bytes  95,538.00 bytes/sec
+total size is 47,603  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 48,727 bytes  received 35 bytes  97,524.00 bytes/sec
+total size is 48,597  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 49,722 bytes  received 35 bytes  99,514.00 bytes/sec
+total size is 49,591  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 50,716 bytes  received 35 bytes  101,502.00 bytes/sec
+total size is 50,585  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 51,851 bytes  received 35 bytes  103,772.00 bytes/sec
+total size is 51,721  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 53,144 bytes  received 35 bytes  106,358.00 bytes/sec
+total size is 53,014  speedup is 1.00
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 53,014  speedup is 582.57
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 53,014  speedup is 582.57
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 53,014  speedup is 582.57
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 53,014  speedup is 582.57
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 54,099 bytes  received 35 bytes  108,268.00 bytes/sec
+total size is 53,969  speedup is 1.00
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 53,969  speedup is 593.07
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 55,297 bytes  received 35 bytes  110,664.00 bytes/sec
+total size is 55,166  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 55,166  speedup is 599.63
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 55,166  speedup is 599.63
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 55,648 bytes  received 35 bytes  37,122.00 bytes/sec
+total size is 55,517  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 56,642 bytes  received 35 bytes  113,354.00 bytes/sec
+total size is 56,511  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 57,635 bytes  received 35 bytes  115,340.00 bytes/sec
+total size is 57,505  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 58,630 bytes  received 35 bytes  117,330.00 bytes/sec
+total size is 58,499  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 59,624 bytes  received 35 bytes  119,318.00 bytes/sec
+total size is 59,493  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 60,618 bytes  received 35 bytes  121,306.00 bytes/sec
+total size is 60,487  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 61,612 bytes  received 35 bytes  123,294.00 bytes/sec
+total size is 61,481  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 63,436 bytes  received 35 bytes  126,942.00 bytes/sec
+total size is 63,305  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 63,757 bytes  received 35 bytes  42,528.00 bytes/sec
+total size is 63,626  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 63,626  speedup is 691.59
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 63,626  speedup is 691.59
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 63,626  speedup is 691.59
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 64,649 bytes  received 35 bytes  129,368.00 bytes/sec
+total size is 64,519  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 64,712 bytes  received 35 bytes  43,164.67 bytes/sec
+total size is 64,581  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 64,581  speedup is 701.97
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 65,917 bytes  received 35 bytes  131,904.00 bytes/sec
+total size is 65,778  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 65,778  speedup is 714.98
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 65,778  speedup is 714.98
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 66,694 bytes  received 35 bytes  133,458.00 bytes/sec
+total size is 66,555  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 67,687 bytes  received 35 bytes  135,444.00 bytes/sec
+total size is 67,549  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 68,682 bytes  received 35 bytes  137,434.00 bytes/sec
+total size is 68,543  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 69,676 bytes  received 35 bytes  139,422.00 bytes/sec
+total size is 69,537  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 70,670 bytes  received 35 bytes  141,410.00 bytes/sec
+total size is 70,531  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 71,522 bytes  received 35 bytes  143,114.00 bytes/sec
+total size is 71,383  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 72,516 bytes  received 35 bytes  145,102.00 bytes/sec
+total size is 72,377  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 74,056 bytes  received 35 bytes  148,182.00 bytes/sec
+total size is 73,917  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 74,392 bytes  received 35 bytes  148,854.00 bytes/sec
+total size is 74,253  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 74,253  speedup is 807.10
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 74,253  speedup is 807.10
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 74,253  speedup is 807.10
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 75,328 bytes  received 35 bytes  150,726.00 bytes/sec
+total size is 75,190  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 75,391 bytes  received 35 bytes  150,852.00 bytes/sec
+total size is 75,252  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 76,588 bytes  received 35 bytes  153,246.00 bytes/sec
+total size is 76,449  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  61.33 bytes/sec
+total size is 76,449  speedup is 830.97
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 76,449  speedup is 830.97
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 76,796 bytes  received 35 bytes  153,662.00 bytes/sec
+total size is 76,658  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 77,791 bytes  received 35 bytes  155,652.00 bytes/sec
+total size is 77,652  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 78,642 bytes  received 35 bytes  157,354.00 bytes/sec
+total size is 78,504  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 79,637 bytes  received 35 bytes  159,344.00 bytes/sec
+total size is 79,498  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 80,631 bytes  received 35 bytes  161,332.00 bytes/sec
+total size is 80,492  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 81,625 bytes  received 35 bytes  163,320.00 bytes/sec
+total size is 81,486  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 82,619 bytes  received 35 bytes  165,308.00 bytes/sec
+total size is 82,480  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 84,442 bytes  received 35 bytes  168,954.00 bytes/sec
+total size is 84,304  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 84,764 bytes  received 35 bytes  169,598.00 bytes/sec
+total size is 84,625  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  61.33 bytes/sec
+total size is 84,625  speedup is 919.84
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 84,625  speedup is 919.84
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 84,625  speedup is 919.84
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 85,657 bytes  received 35 bytes  171,384.00 bytes/sec
+total size is 85,518  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 85,719 bytes  received 35 bytes  171,508.00 bytes/sec
+total size is 85,580  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 86,916 bytes  received 35 bytes  173,902.00 bytes/sec
+total size is 86,777  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 86,777  speedup is 943.23
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 86,777  speedup is 943.23
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 87,692 bytes  received 35 bytes  175,454.00 bytes/sec
+total size is 87,554  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 88,828 bytes  received 35 bytes  177,726.00 bytes/sec
+total size is 88,690  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 89,823 bytes  received 35 bytes  179,716.00 bytes/sec
+total size is 89,684  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 90,959 bytes  received 35 bytes  181,988.00 bytes/sec
+total size is 90,820  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 92,095 bytes  received 35 bytes  184,260.00 bytes/sec
+total size is 91,956  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 93,776 bytes  received 35 bytes  187,622.00 bytes/sec
+total size is 93,638  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 94,100 bytes  received 35 bytes  188,270.00 bytes/sec
+total size is 93,961  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 93,961  speedup is 1,021.32
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 93,961  speedup is 1,021.32
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 95,055 bytes  received 35 bytes  190,180.00 bytes/sec
+total size is 94,916  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 94,916  speedup is 1,031.70
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 96,252 bytes  received 35 bytes  192,574.00 bytes/sec
+total size is 96,113  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 96,113  speedup is 1,044.71
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 97,582 bytes  received 35 bytes  65,078.00 bytes/sec
+total size is 97,443  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 99,151 bytes  received 35 bytes  198,372.00 bytes/sec
+total size is 99,005  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 100,714 bytes  received 35 bytes  201,498.00 bytes/sec
+total size is 100,567  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 103,106 bytes  received 35 bytes  206,282.00 bytes/sec
+total size is 102,959  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 103,429 bytes  received 35 bytes  206,928.00 bytes/sec
+total size is 103,282  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 103,282  speedup is 1,122.63
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 104,322 bytes  received 35 bytes  69,571.33 bytes/sec
+total size is 104,175  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 104,384 bytes  received 35 bytes  208,838.00 bytes/sec
+total size is 104,237  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 105,581 bytes  received 35 bytes  211,232.00 bytes/sec
+total size is 105,434  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 105,434  speedup is 1,146.02
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 107,904 bytes  received 35 bytes  215,878.00 bytes/sec
+total size is 107,757  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 110,477 bytes  received 35 bytes  221,024.00 bytes/sec
+total size is 110,330  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 110,330  speedup is 1,199.24
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 110,330  speedup is 1,199.24
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 111,370 bytes  received 35 bytes  222,810.00 bytes/sec
+total size is 111,223  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 111,432 bytes  received 35 bytes  222,934.00 bytes/sec
+total size is 111,285  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 112,629 bytes  received 35 bytes  75,109.33 bytes/sec
+total size is 112,482  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 112,822 bytes  received 35 bytes  225,714.00 bytes/sec
+total size is 112,675  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 115,235 bytes  received 35 bytes  230,540.00 bytes/sec
+total size is 115,089  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 117,241 bytes  received 35 bytes  234,552.00 bytes/sec
+total size is 117,094  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 117,094  speedup is 1,272.76
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 117,094  speedup is 1,272.76
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 118,195 bytes  received 35 bytes  236,460.00 bytes/sec
+total size is 118,049  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 119,392 bytes  received 35 bytes  238,854.00 bytes/sec
+total size is 119,246  speedup is 1.00
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 119,246  speedup is 1,310.40
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 120,438 bytes  received 35 bytes  240,946.00 bytes/sec
+total size is 120,291  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 122,852 bytes  received 35 bytes  245,774.00 bytes/sec
+total size is 122,705  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 124,431 bytes  received 35 bytes  248,932.00 bytes/sec
+total size is 124,284  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 124,284  speedup is 1,350.91
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 124,284  speedup is 1,350.91
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 125,386 bytes  received 35 bytes  250,842.00 bytes/sec
+total size is 125,239  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 126,582 bytes  received 35 bytes  253,234.00 bytes/sec
+total size is 126,436  speedup is 1.00
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 126,436  speedup is 1,389.41
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 127,217 bytes  received 35 bytes  254,504.00 bytes/sec
+total size is 127,070  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 130,745 bytes  received 35 bytes  261,560.00 bytes/sec
+total size is 130,598  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 131,068 bytes  received 35 bytes  262,206.00 bytes/sec
+total size is 130,921  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 130,921  speedup is 1,423.05
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 130,921  speedup is 1,423.05
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 132,075 bytes  received 35 bytes  264,220.00 bytes/sec
+total size is 131,920  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 131,920  speedup is 1,433.91
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 133,272 bytes  received 35 bytes  266,614.00 bytes/sec
+total size is 133,117  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 134,048 bytes  received 35 bytes  268,166.00 bytes/sec
+total size is 133,893  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 136,865 bytes  received 35 bytes  273,800.00 bytes/sec
+total size is 136,711  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 137,189 bytes  received 35 bytes  274,448.00 bytes/sec
+total size is 137,034  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 137,034  speedup is 1,489.50
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 137,034  speedup is 1,489.50
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 138,163 bytes  received 35 bytes  276,396.00 bytes/sec
+total size is 138,009  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 139,360 bytes  received 35 bytes  278,790.00 bytes/sec
+total size is 139,206  speedup is 1.00
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 139,206  speedup is 1,529.74
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 142,230 bytes  received 35 bytes  284,530.00 bytes/sec
+total size is 142,075  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 142,553 bytes  received 35 bytes  285,176.00 bytes/sec
+total size is 142,398  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 142,398  speedup is 1,547.80
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 142,398  speedup is 1,547.80
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 143,484 bytes  received 35 bytes  287,038.00 bytes/sec
+total size is 143,329  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 144,681 bytes  received 35 bytes  289,432.00 bytes/sec
+total size is 144,526  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 144,526  speedup is 1,570.93
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 146,151 bytes  received 35 bytes  292,372.00 bytes/sec
+total size is 145,997  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 147,873 bytes  received 35 bytes  295,816.00 bytes/sec
+total size is 147,718  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 147,718  speedup is 1,605.63
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 147,718  speedup is 1,605.63
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 148,786 bytes  received 35 bytes  297,642.00 bytes/sec
+total size is 148,631  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 148,848 bytes  received 35 bytes  297,766.00 bytes/sec
+total size is 148,693  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 150,045 bytes  received 35 bytes  300,160.00 bytes/sec
+total size is 149,890  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 151,090 bytes  received 35 bytes  302,250.00 bytes/sec
+total size is 150,935  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 153,236 bytes  received 35 bytes  306,542.00 bytes/sec
+total size is 153,082  speedup is 1.00
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 153,082  speedup is 1,682.22
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  60.67 bytes/sec
+total size is 153,082  speedup is 1,682.22
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 154,149 bytes  received 35 bytes  308,368.00 bytes/sec
+total size is 153,995  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 154,212 bytes  received 35 bytes  308,494.00 bytes/sec
+total size is 154,057  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 155,409 bytes  received 35 bytes  310,888.00 bytes/sec
+total size is 155,254  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 155,254  speedup is 1,687.54
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 158,278 bytes  received 35 bytes  316,626.00 bytes/sec
+total size is 158,123  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 158,601 bytes  received 35 bytes  317,272.00 bytes/sec
+total size is 158,446  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 158,446  speedup is 1,722.24
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 158,446  speedup is 1,722.24
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 159,513 bytes  received 35 bytes  319,096.00 bytes/sec
+total size is 159,359  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 159,575 bytes  received 35 bytes  319,220.00 bytes/sec
+total size is 159,421  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 160,773 bytes  received 35 bytes  321,616.00 bytes/sec
+total size is 160,618  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 161,533 bytes  received 35 bytes  323,136.00 bytes/sec
+total size is 161,379  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 163,965 bytes  received 35 bytes  328,000.00 bytes/sec
+total size is 163,810  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 163,810  speedup is 1,780.54
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 163,810  speedup is 1,780.54
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 164,886 bytes  received 35 bytes  329,842.00 bytes/sec
+total size is 164,723  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 164,948 bytes  received 35 bytes  329,966.00 bytes/sec
+total size is 164,785  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 166,145 bytes  received 35 bytes  332,360.00 bytes/sec
+total size is 165,982  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 165,982  speedup is 1,804.15
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 168,872 bytes  received 35 bytes  337,814.00 bytes/sec
+total size is 168,709  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 169,194 bytes  received 35 bytes  338,458.00 bytes/sec
+total size is 169,032  speedup is 1.00
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 169,032  speedup is 1,857.49
+sending incremental file list
+
+sent 79 bytes  received 12 bytes  182.00 bytes/sec
+total size is 169,032  speedup is 1,857.49
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 170,169 bytes  received 35 bytes  340,408.00 bytes/sec
+total size is 170,007  speedup is 1.00
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 171,367 bytes  received 35 bytes  342,804.00 bytes/sec
+total size is 171,204  speedup is 1.00
+sending incremental file list
+
+sent 80 bytes  received 12 bytes  184.00 bytes/sec
+total size is 171,204  speedup is 1,860.91
+sending incremental file list
+benz-p1_spf2.jl.out
+
+sent 179,121 bytes  received 35 bytes  358,312.00 bytes/sec
+total size is 178,959  speedup is 1.00
+rm: cannot remove ‘tmpfs’: Device or resource busy
