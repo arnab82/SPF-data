@@ -1,1 +1,2 @@
-# SPF-data
+# SPT-data
+Subspace Product Tucker calculations
