@@ -119,11 +119,11 @@ for key in energy_var:
     #print("color",cb[key])
     label_pos_x = x2[-1]  # Use the last x position
     label_pos_y = line[-1]  # Corresponding y position of the line
-    ax.text(label_pos_x, label_pos_y, f'R={key}', fontsize=10, color=cc[key+1], ha='left', va='center')
+    ax.text(label_pos_x, label_pos_y, f'R={key}', fontsize=8, color=cc[key+1], ha='left', va='center')
 var_marker = mlines.Line2D([], [], color='black', marker='o', linestyle='None',
-                          markersize=10, label='Variational')
+                          markersize=8, label='Variational')
 pt2_marker = mlines.Line2D([], [], color='black', marker='x', linestyle='None',
-                          markersize=10, label='PT2')
+                          markersize=8, label='PT2')
 ax.legend([var_marker, pt2_marker],  ['Variational', 'PT2'], loc='upper left')
 xmax = 0
 xmin = -60
