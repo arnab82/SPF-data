@@ -76,7 +76,7 @@ println("***********************************************************************
     
 
 e_var, v_var = FermiCG.block_sparse_tucker(v, cluster_ops, clustered_ham,
-                                               max_iter    = 200,,
+                                               max_iter    = 200,
                                                nbody       = 4,
                                                H0          = "Hcmf",
                                                thresh_var  = 1e-2,

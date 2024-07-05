@@ -87,6 +87,6 @@ for thresh_cipsi in thresh_list
 
 
     display(v0)
-    end
+    
 end
 
