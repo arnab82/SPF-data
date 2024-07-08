@@ -71,9 +71,9 @@ extrap = []
 #set your x and y axis limits
 
 xmax = 0
-xmin = -1
+xmin = -400
 
-ymax = 1450
+ymax = 2000
 ymin = 0
 # for s in energy_var:
 #    ymax = max(np.max(energy_var[s]), ymax)
@@ -125,11 +125,7 @@ var_marker = mlines.Line2D([], [], color='black', marker='o', linestyle='None',
 pt2_marker = mlines.Line2D([], [], color='black', marker='x', linestyle='None',
                           markersize=8, label='PT2')
 ax.legend([var_marker, pt2_marker],  ['Variational', 'PT2'], loc='upper left')
-xmax = 0
-xmin = -60
 
-ymax = 1700
-ymin = 0
 ymin = ymin - 50
 print("x: ", (xmin, xmax))
 print("y: ", (ymin, ymax))
@@ -163,7 +159,7 @@ filtered_labels = [label for label, handle in zip(labels, handles) if handle.get
 # var_marker = mlines.Line2D([], [], color='grey', marker='o', linestyle='None',
 #                           markersize=10, label='Variational')
 # pt2_marker = mlines.Line2D([], [], color='grey', marker='x', linestyle='None',
-#                           markersize=10, label='PT2')
+                        #   markersize=10, label='PT2')
 
 fig = plt.gcf()
 fig.set_size_inches(4.5,4.5)
