@@ -9,7 +9,7 @@ import matplotlib.patches as mpatches
 from matplotlib import colors as mcolors
 import matplotlib.lines as mlines
 import scipy
-
+from matplotlib.ticker import FuncFormatter
 file = os.path.splitext(sys.argv[1])[0]
 
 print(" Working with file: ", file)
@@ -26,6 +26,7 @@ with open(data_path, 'r') as f:
 conversion = 219474.63 # cm-1
 # conversion = 1 # hartrees
 conversion = 1000 # mH 
+conversion =27.2114 # eV
 n_extrap_points = int((len(data[0]))//2)
 print(" Number of extrapolation points: ", n_extrap_points)
 energy_var = {}
@@ -122,21 +123,27 @@ var_marker = mlines.Line2D([], [], color='grey', marker='o', linestyle='None',
 pt2_marker = mlines.Line2D([], [], color='grey', marker='x', linestyle='None',
                           markersize=10, label='PT2')
 xmax = 0
-xmin = -0.5
+xmin = -0.02
 
-ymax = 160
+ymax = 4.5
 ymin = 0
-ymin = ymin - 5
+ymin = ymin - 0.4
 print("x: ", (xmin, xmax))
 print("y: ", (ymin, ymax))
 ax.set_ylim(ymin, ymax)
 ax.set_xlim(xmin, xmax)
 # Set y-axis ticks and labels
-
-ax.set_xlabel('$\Delta$E$_{PT2}$ (mH) ')
-ax.set_ylabel('Shifted Energy (mH) ')
+ax.set_xlabel('$\Delta$E$_{PT2}$ (eV) ')
+ax.set_ylabel('Shifted Energy (eV) ')
+# ax.set_xlabel('$\Delta$E$_{PT2}$ (mH) ')
+# ax.set_ylabel('Shifted Energy (mH) ')
 ax.tick_params(axis='x', labelsize=10)
 ax.tick_params(axis='y', labelsize=10)
+
+formatter = FuncFormatter(lambda x, _: f'{x:.2f}')
+ax.xaxis.set_major_formatter(formatter)
+ax.yaxis.set_major_formatter(formatter)
+
 #ax.set_yticklabels([])
 # ax.yaxis.set_label_position("right")
 # ax.yaxis.tick_right()
