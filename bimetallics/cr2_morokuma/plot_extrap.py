@@ -75,6 +75,7 @@ xmin = -400.75
 
 ymax = 2400
 ymin = 0
+ymin = ymin - 25
 # for s in energy_var:
 #    ymax = max(np.max(energy_var[s]), ymax)
 #    ymin = min(np.min(energy_pt2[s]), ymin)
@@ -126,7 +127,7 @@ pt2_marker = mlines.Line2D([], [], color='black', marker='x', linestyle='None',
                           markersize=8, label='PT2')
 ax.legend([var_marker, pt2_marker],  ['Variational', 'PT2'], loc='upper left')
 
-ymin = ymin - 5
+ymin = ymin - 25
 print("x: ", (xmin, xmax))
 print("y: ", (ymin, ymax))
 ax.set_ylim(ymin, ymax)
