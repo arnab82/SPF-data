@@ -73,9 +73,9 @@ extrap = []
 xmax = 0
 xmin = -1.8
 
-ymax = 12
+ymax = 4.5
 ymin = 0
-# ymin = ymin - 0.5
+# ymin = ymin - 80
 # for s in energy_var:
 #    ymax = max(np.max(energy_var[s]), ymax)
 #    ymin = min(np.min(energy_pt2[s]), ymin)
@@ -95,22 +95,22 @@ for key in energy_var:
     plt.rcParams.update({'font.size': 10})
 
     ymin = min(ymin, b)
-    print("ymin",ymin)
+    print("ymin: ", ymin)
     ymax = max(ymax, m*xmin+b)
     print(x,y)
     print(x,z)
     # if key >=1:
     #     break
     for j in range(len(x)):
-        ax.plot(x[j], y[j], marker='o', linestyle='-', markersize=8, color=cc[key+1])
-        ax.plot(x[j], z[j], marker='x', linestyle=' ', markersize=8, color=cc[key+1])
+        ax.plot(x[j], y[j]+0.21662126232348133, marker='o', linestyle='-', markersize=8, color=cc[key+1])
+        ax.plot(x[j], z[j]+0.21662126232348133, marker='x', linestyle=' ', markersize=8, color=cc[key+1])
     
     x2 = np.array([-1,0])*conversion
-    line = m*x2+b
+    line = m*x2+b+0.21662126232348133
     print("y axis values are", line)
     print("b value is ", b)
     ax.plot(x2, line, alpha=1.0, color=cc[key+1], linestyle='-', linewidth=1.5, label="R=%d" % key )
-    line = m2*x2+b  
+    line = m2*x2+b  +0.21662126232348133
     print("y axis values are", line)                                  
     ax.plot(x2, line, alpha=0.5, color = cc[key+1], linestyle='--', linewidth=1.5,label='R=%d'%key)
     print("Extrapolated Result: %14.8f"% ((b+emin)/conversion))
@@ -128,7 +128,7 @@ pt2_marker = mlines.Line2D([], [], color='black', marker='x', linestyle='None',
                           markersize=8, label='PT2')
 ax.legend([var_marker, pt2_marker],  ['Variational', 'PT2'], loc='upper left')
 
-ymin = ymin - 0.5
+ymin = ymin - 0.2
 print("x: ", (xmin, xmax))
 print("y: ", (ymin, ymax))
 ax.set_ylim(ymin, ymax)

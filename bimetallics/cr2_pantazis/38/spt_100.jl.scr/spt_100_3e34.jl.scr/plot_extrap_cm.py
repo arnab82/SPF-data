@@ -23,9 +23,9 @@ with open(data_path, 'r') as f:
     headers = next(reader)
     data = list(reader)
 
-# conversion = 219474.63 # cm-1
+conversion = 219474.63 # cm-1
 # conversion = 1 # hartrees
-conversion = 1000 # mH 
+# conversion = 1000 # mH 
 n_extrap_points = int((len(data[0]))//2)
 print(" Number of extrapolation points: ", n_extrap_points)
 energy_var = {}
@@ -71,11 +71,11 @@ extrap = []
 #set your x and y axis limits
 
 xmax = 0
-xmin = -1.8
+xmin = -400
 
-ymax = 12
+ymax = 1000
 ymin = 0
-# ymin = ymin - 0.5
+# ymin = ymin - 80
 # for s in energy_var:
 #    ymax = max(np.max(energy_var[s]), ymax)
 #    ymin = min(np.min(energy_pt2[s]), ymin)
@@ -95,22 +95,22 @@ for key in energy_var:
     plt.rcParams.update({'font.size': 10})
 
     ymin = min(ymin, b)
-    print("ymin",ymin)
+    print("ymin: ", ymin)
     ymax = max(ymax, m*xmin+b)
     print(x,y)
     print(x,z)
     # if key >=1:
     #     break
     for j in range(len(x)):
-        ax.plot(x[j], y[j], marker='o', linestyle='-', markersize=8, color=cc[key+1])
-        ax.plot(x[j], z[j], marker='x', linestyle=' ', markersize=8, color=cc[key+1])
+        ax.plot(x[j], y[j]+47.5428713477034, marker='o', linestyle='-', markersize=8, color=cc[key+1])
+        ax.plot(x[j], z[j]+47.5428713477034, marker='x', linestyle=' ', markersize=8, color=cc[key+1])
     
     x2 = np.array([-1,0])*conversion
-    line = m*x2+b
+    line = m*x2+b+47.5428713477034
     print("y axis values are", line)
     print("b value is ", b)
     ax.plot(x2, line, alpha=1.0, color=cc[key+1], linestyle='-', linewidth=1.5, label="R=%d" % key )
-    line = m2*x2+b  
+    line = m2*x2+b  +47.5428713477034
     print("y axis values are", line)                                  
     ax.plot(x2, line, alpha=0.5, color = cc[key+1], linestyle='--', linewidth=1.5,label='R=%d'%key)
     print("Extrapolated Result: %14.8f"% ((b+emin)/conversion))
@@ -128,16 +128,16 @@ pt2_marker = mlines.Line2D([], [], color='black', marker='x', linestyle='None',
                           markersize=8, label='PT2')
 ax.legend([var_marker, pt2_marker],  ['Variational', 'PT2'], loc='upper left')
 
-ymin = ymin - 0.5
+ymin = ymin - 80
 print("x: ", (xmin, xmax))
 print("y: ", (ymin, ymax))
 ax.set_ylim(ymin, ymax)
 ax.set_xlim(xmin, xmax)
 # Set y-axis ticks and labels
-# ax.set_xlabel('$\Delta$E$_{PT2}$ (cm$^{-1}$) ')
-# ax.set_ylabel('Shifted Energy (cm$^{-1}$) ')
-ax.set_xlabel('$\Delta$E$_{PT2}$ (mH) ')
-ax.set_ylabel('Shifted Energy (mH) ')
+ax.set_xlabel('$\Delta$E$_{PT2}$ (cm$^{-1}$) ')
+ax.set_ylabel('Shifted Energy (cm$^{-1}$) ')
+# ax.set_xlabel('$\Delta$E$_{PT2}$ (mH) ')
+# ax.set_ylabel('Shifted Energy (mH) ')
 ax.tick_params(axis='x', labelsize=10)
 ax.tick_params(axis='y', labelsize=10)
 #ax.set_yticklabels([])
@@ -165,7 +165,7 @@ filtered_labels = [label for label, handle in zip(labels, handles) if handle.get
 
 fig = plt.gcf()
 fig.set_size_inches(4.5,4.5)
-fig.savefig(file+'_extrap.pdf', dpi=300, bbox_inches='tight')
+fig.savefig(file+'_extrap2.pdf', dpi=300, bbox_inches='tight')
 
 plt.show()
 
