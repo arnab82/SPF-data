@@ -1,0 +1,74 @@
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229
+┌ Warning: ("initial guess det(v0'v0) = ", 0.9999999999999885)
+└ @ FermiCG ~/SPF-data/FermiCG/src/type_BSTstate.jl:460
+┌ Warning: ("initial guess det(v0'v0) = ", 0.9999999999999888)
+└ @ FermiCG ~/SPF-data/FermiCG/src/type_BSTstate.jl:460
+┌ Warning: Linear dependency detected. Restarting.
+└ @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:229

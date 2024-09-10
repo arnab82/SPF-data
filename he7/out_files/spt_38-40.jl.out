@@ -1,0 +1,40 @@
+ERROR: LoadError: MethodError: no method matching isless(::ComplexF64, ::ComplexF64)
+Closest candidates are:
+  isless(::Any, !Matched::Missing) at /apps/easybuild/software/tinkercliffs-rome/Julia/1.7.2-linux-x86_64/share/julia/base/missing.jl:88
+  isless(!Matched::Missing, ::Any) at /apps/easybuild/software/tinkercliffs-rome/Julia/1.7.2-linux-x86_64/share/julia/base/missing.jl:87
+Stacktrace:
+  [1] lt(o::Base.Order.ForwardOrdering, a::ComplexF64, b::ComplexF64)
+    @ Base.Order ./ordering.jl:109
+  [2] lt
+    @ ./ordering.jl:117 [inlined]
+  [3] sort!
+    @ ./sort.jl:507 [inlined]
+  [4] sort!
+    @ ./sort.jl:574 [inlined]
+  [5] sort!(v::Vector{Int64}, alg::Base.Sort.QuickSortAlg, order::Base.Order.Perm{Base.Order.ForwardOrdering, Vector{ComplexF64}})
+    @ Base.Sort ./sort.jl:662
+  [6] sortperm(v::Vector{ComplexF64}; alg::Base.Sort.QuickSortAlg, lt::Function, by::Function, rev::Nothing, order::Base.Order.ForwardOrdering)
+    @ Base.Sort ./sort.jl:928
+  [7] sortperm
+    @ ./sort.jl:911 [inlined]
+  [8] iteration(solver::BlockDavidson.Davidson{Float64}; Adiag::Matrix{Float64}, iprint::Int64, precond_start_thresh::Float64)
+    @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:162
+  [9] eigs(solver::BlockDavidson.Davidson{Float64}; Adiag::Matrix{Float64}, iprint::Int64, precond_start_thresh::Float64)
+    @ BlockDavidson ~/.julia/packages/BlockDavidson/HYzYU/src/BlockDavidson.jl:221
+ [10] macro expansion
+    @ ./timing.jl:299 [inlined]
+ [11] ci_solve(ci_vector_in::BSTstate{Float64, 7, 15}, cluster_ops::Vector{FermiCG.ClusterOps{Float64}}, clustered_ham::ClusteredOperator{7}; conv_thresh::Float64, max_ss_vecs::Int64, max_iter::Int64, lindep_thresh::Float64, shift::Nothing, precond::Bool, verbose::Int64, nbody::Int64, solver::String)
+    @ FermiCG ~/SPF-data/FermiCG/src/tucker_outer.jl:185
+ [12] macro expansion
+    @ ~/.julia/packages/TimerOutputs/RsWnF/src/TimerOutput.jl:237 [inlined]
+ [13] block_sparse_tucker(input_vec::BSTstate{Float64, 7, 15}, cluster_ops::Vector{FermiCG.ClusterOps{Float64}}, clustered_ham::ClusteredOperator{7}; max_iter::Int64, nbody::Int64, H0::String, thresh_var::Float64, thresh_foi::Float64, thresh_pt::Float64, thresh_spin::Nothing, ci_conv::Float64, ci_max_iter::Int64, ci_max_ss_vecs::Int64, ci_lindep_thresh::Float64, resolve_ss::Bool, do_pt::Bool, tol_tucker::Float64, solver::String, verbose::Int64)
+    @ FermiCG ~/SPF-data/FermiCG/src/bst.jl:566
+ [14] (::var"#1#6"{Int64})()
+    @ Main /localscratch/2454695/spt_38-40.jl:42
+ [15] redirect_stdio(f::var"#1#6"{Int64}; stdin::Nothing, stderr::String, stdout::String)
+    @ Base ./stream.jl:1343
+ [16] run_spt_scan()
+    @ Main /localscratch/2454695/spt_38-40.jl:15
+ [17] top-level scope
+    @ /localscratch/2454695/spt_38-40.jl:83
+in expression starting at /localscratch/2454695/spt_38-40.jl:83
