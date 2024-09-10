@@ -1,0 +1,1921 @@
+IDX001:DIM1048576:001|002|003|004|005|006|007|008|009|010|
+IDX002:DIM1048576:011|012|013|014|015|016|017|018|019|020|
+IDX003:DIM4096:021|022|023|024|025|026|
+IDX004:DIM4096:027|028|029|030|031|032|
+IDX005:DIM4096:033|034|035|036|037|038|
+5-element Vector{Tuple{Int64, Int64}}:
+ (5, 2)
+ (2, 5)
+ (3, 3)
+ (3, 3)
+ (3, 3) Remove duplicates
+ Number of terms reduced from  2525 to  1105
+IDX001:DIM1048576:001|002|003|004|005|006|007|008|009|010|
+IDX002:DIM1048576:011|012|013|014|015|016|017|018|019|020|
+IDX003:DIM4096:021|022|023|024|025|026|
+IDX004:DIM4096:027|028|029|030|031|032|
+IDX005:DIM4096:033|034|035|036|037|038|
+ max_iter         : 5
+ nbody            : 4
+ H0               : Hcmf
+ thresh_var       : 0.007
+ thresh_foi       : 3.0e-5
+ thresh_pt        : 0.00095
+ thresh_spin      : 0.00095
+ ci_conv          : 1.0e-5
+ ci_max_iter      : 50
+ ci_max_ss_vecs   : 12
+ ci_lindep_thresh : 1.0e-10
+ resolve_ss       : false
+ do_pt            : true
+ tol_tucker       : 1.0e-6
+
+
+
+ ===================================================================
+     BST Iteration:    1 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            467445 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      169.522883 seconds (118.13 M allocations: 156.305 GiB, 59.08% gc time, 29.42% compilation time)
+ Compute <S^2>:                                      0.272287 seconds (1.40 M allocations: 553.262 MiB, 45.52% compilation time)
+  Root       Energy           S2
+     1 -171.17790656   0.00390015
+     2 -171.17782863   2.00099463
+     3 -171.17721010   5.99679480
+     4 -171.17631885  11.99808097
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.039305 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            1786.198265 seconds (351.48 M allocations: 1.860 TiB, 46.97% gc time, 3.02% compilation time)
+ Now collect thread results :                        0.035322 seconds (53.07 k allocations: 3.251 MiB, 79.61% compilation time)
+ Compressing final σ vector:
+   Iter:    1     68170613 →     66028849
+   Iter:    2     66028849 →     65726397
+   Iter:    3     65726397 →     65658370
+   Iter:    4     65658370 →     65643485
+   Iter:    5     65643485 →     65643053
+   Iter:    6     65643053 →     65643005
+   Iter:    7     65643005 →     65642969
+   Iter:    8     65642969 →     65642969
+ Compute Compressed FOIS:                          2063.928861 seconds   2.16e+03 Gb
+ Total time spent building FOIS:                   2063.928861 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65642969
+ Compute <X|H|0>:                                  2057.475209 seconds   1.86e+03 Gb
+ Compute <X|F|0>:                                    0.632197 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01335479
+ State   2: E(PT2) corr:                          -0.01322972
+ State   3: E(PT2) corr:                          -0.01334633
+ State   4: E(PT2) corr:                          -0.01348222
+  Root         E(0)         E(2)
+     1 -171.17790656 -171.19126135
+     2 -171.17782863 -171.19105835
+     3 -171.17721010 -171.19055644
+     4 -171.17631885 -171.18980107
+ ......................................................................................|
+ Total time spent building PT1:                    2406.540033 seconds
+ FOIS compressed from:                               65642969 → 6474506    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 30993      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.930008 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.006643 seconds (31.30 k allocations: 2.554 MiB)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            983.167371 seconds (71.88 M allocations: 1.305 TiB, 86.78% gc time, 1.45% compilation time)
+ Now collect thread results :                        0.002596 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3684276 →      3683527
+   Iter:    2      3683527 →      3683421
+   Iter:    3      3683421 →      3683411
+   Iter:    4      3683411 →      3683411
+   S^2 Residual   0.00721113
+   S^2 Residual   0.00591333
+   S^2 Residual   0.00723323
+   S^2 Residual   0.01274019
+ Compressing S^2 residual vector:
+   Iter:    1      7831710 →        74907
+   Iter:    2        74907 →        70114
+   Iter:    3        70114 →        69240
+   Iter:    4        69240 →        69024
+   Iter:    5        69024 →        68973
+   Iter:    6        68973 →        68973
+ Variational space increased from:                      30993 → 469163     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            469163
+ Cache Hamiltonian:                                3611.307797 seconds (420.41 M allocations: 2.234 TiB, 69.83% gc time, 0.03% compilation time)
+ Iter:   1 SS: 4    E: -171.19184433  -171.19160132  -171.19115053  -171.19046722   R: 1.6e-02  1.7e-02  1.5e-02  1.4e-02   LinDep: 2.2e-16* 
+ Iter:   2 SS: 8    E: -171.19194680  -171.19171840  -171.19124351  -171.19054460   R: 3.7e-03  3.8e-03  3.7e-03  3.5e-03   LinDep: 2.7e-15* 
+ Iter:   3 SS: 12   E: -171.19195227  -171.19172409  -171.19124877  -171.19054928   R: 1.8e-03  1.7e-03  1.7e-03  1.6e-03   LinDep: 3.8e-15* 
+ Iter:   4 SS: 16   E: -171.19195340  -171.19172515  -171.19124979  -171.19055025   R: 8.8e-04  8.1e-04  7.9e-04  8.0e-04   LinDep: 7.8e-16* 
+ Iter:   5 SS: 20   E: -171.19195375  -171.19172544  -171.19125004  -171.19055052   R: 5.6e-04  5.1e-04  4.4e-04  4.7e-04   LinDep: 1.2e-14* 
+ Iter:   6 SS: 24   E: -171.19195389  -171.19172556  -171.19125013  -171.19055062   R: 3.5e-04  3.2e-04  2.6e-04  2.9e-04   LinDep: 6.9e-15* 
+ Iter:   7 SS: 28   E: -171.19195394  -171.19172560  -171.19125015  -171.19055065   R: 2.2e-04  2.0e-04  1.6e-04  2.0e-04   LinDep: 1.1e-14* 
+ Iter:   8 SS: 32   E: -171.19195396  -171.19172561  -171.19125016  -171.19055067   R: 1.3e-04  1.2e-04  9.7e-05  1.4e-04   LinDep: 4.9e-15* 
+ Iter:   9 SS: 36   E: -171.19195396  -171.19172562  -171.19125017  -171.19055068   R: 9.0e-05  8.4e-05  6.6e-05  9.8e-05   LinDep: 6.0e-15* 
+ Iter:  10 SS: 40   E: -171.19195397  -171.19172562  -171.19125017  -171.19055068   R: 5.8e-05  5.4e-05  4.4e-05  6.1e-05   LinDep: 1.2e-14* 
+ Iter:  11 SS: 44   E: -171.19195397  -171.19172562  -171.19125017  -171.19055068   R: 3.6e-05  3.3e-05  2.8e-05  3.4e-05   LinDep: 1.3e-15* 
+ Iter:  12 SS: 48   E: -171.19195397  -171.19172562  -171.19125017  -171.19055068   R: 2.3e-05  2.1e-05  1.8e-05  1.9e-05   LinDep: 2.4e-15* 
+ Iter:  13 SS: 48   E: -171.19195397  -171.19172562  -171.19125017  -171.19055068   R: 1.4e-05  1.2e-05  1.1e-05  1.1e-05   LinDep: 2.2e-16* 
+ Iter:  14 SS: 48   E: -171.19195397* -171.19172562* -171.19125017* -171.19055068*  R: 9.3e-06* 8.4e-06* 7.0e-06* 6.5e-06*  LinDep: 2.8e-13* 
+ Diagonalization time:                             1490.710419 seconds
+ Compute <S^2>:                                     11.148954 seconds (16.79 M allocations: 8.149 GiB, 80.14% gc time, 0.06% compilation time)
+  Root       Energy           S2
+     1 -171.19195397   0.00103342
+     2 -171.19172562   2.00019345
+     3 -171.19125017   5.99953456
+     4 -171.19055068  11.99966666
+ ==================================================================|
+ E(Reference):       -171.17790656 -171.17782863 -171.17721010 -171.17631885 
+ E(PT2):             -171.19126135 -171.19105835 -171.19055644 -171.18980107 
+ E(BST):             -171.19195397 -171.19172562 -171.19125017 -171.19055068 
+
+
+
+
+ ===================================================================
+     BST Iteration:    2 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            469163 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      211.461011 seconds (24.00 M allocations: 165.169 GiB, 84.20% gc time)
+ Compute <S^2>:                                      0.140817 seconds (1.21 M allocations: 543.003 MiB)
+  Root       Energy           S2
+     1 -171.17791209   0.00131001
+     2 -171.17782286   2.00025857
+     3 -171.17719315   5.99944257
+     4 -171.17631539  11.99876509
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.040025 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            2133.760843 seconds (299.22 M allocations: 1.858 TiB, 51.27% gc time)
+ Now collect thread results :                        0.008082 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68624498 →     66405396
+   Iter:    2     66405396 →     66127306
+   Iter:    3     66127306 →     66067255
+   Iter:    4     66067255 →     66054094
+   Iter:    5     66054094 →     66053666
+   Iter:    6     66053666 →     66053650
+   Iter:    7     66053650 →     66053650
+ Compute Compressed FOIS:                          2429.106074 seconds   2.14e+03 Gb
+ Total time spent building FOIS:                   2429.106074 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          66053650
+ Compute <X|H|0>:                                  2619.542151 seconds   1.87e+03 Gb
+ Compute <X|F|0>:                                    1.069290 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01335488
+ State   2: E(PT2) corr:                          -0.01323914
+ State   3: E(PT2) corr:                          -0.01336228
+ State   4: E(PT2) corr:                          -0.01348486
+  Root         E(0)         E(2)
+     1 -171.17791209 -171.19126697
+     2 -171.17782286 -171.19106200
+     3 -171.17719315 -171.19055544
+     4 -171.17631539 -171.18980025
+ ......................................................................................|
+ Total time spent building PT1:                    3020.348977 seconds
+ FOIS compressed from:                               66053650 → 6493767    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31017      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.856136 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.006828 seconds (31.30 k allocations: 2.554 MiB)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1030.775993 seconds (70.67 M allocations: 1.306 TiB, 86.74% gc time)
+ Now collect thread results :                        0.002842 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3597598 →      3596538
+   Iter:    2      3596538 →      3596425
+   Iter:    3      3596425 →      3596417
+   Iter:    4      3596417 →      3596417
+   S^2 Residual   0.00779618
+   S^2 Residual   0.00625498
+   S^2 Residual   0.00791118
+   S^2 Residual   0.01327554
+ Compressing S^2 residual vector:
+   Iter:    1      7677742 →        77267
+   Iter:    2        77267 →        71872
+   Iter:    3        71872 →        70959
+   Iter:    4        70959 →        70750
+   Iter:    5        70750 →        70581
+   Iter:    6        70581 →        70547
+   Iter:    7        70547 →        70547
+ Variational space increased from:                      31017 → 474138     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            474138
+ Cache Hamiltonian:                                4161.165823 seconds (435.08 M allocations: 2.331 TiB, 68.77% gc time)
+ Iter:   1 SS: 4    E: -171.19194351  -171.19171506  -171.19123775  -171.19053739   R: 1.2e-02  9.5e-03  1.3e-02  1.2e-02   LinDep: 5.8e-15* 
+ Iter:   2 SS: 8    E: -171.19200209  -171.19174864  -171.19129701  -171.19059565   R: 2.5e-03  1.8e-03  2.5e-03  3.0e-03   LinDep: 1.3e-15* 
+ Iter:   3 SS: 12   E: -171.19200472  -171.19174994  -171.19129970  -171.19059916   R: 1.1e-03  7.7e-04  1.1e-03  1.3e-03   LinDep: 2.7e-15* 
+ Iter:   4 SS: 16   E: -171.19200511  -171.19175015  -171.19130011  -171.19059973   R: 5.0e-04  3.6e-04  5.2e-04  6.7e-04   LinDep: 8.9e-16* 
+ Iter:   5 SS: 20   E: -171.19200522  -171.19175020  -171.19130022  -171.19059993   R: 3.1e-04  2.2e-04  3.1e-04  4.2e-04   LinDep: 4.7e-15* 
+ Iter:   6 SS: 24   E: -171.19200526  -171.19175023  -171.19130027  -171.19060002   R: 2.0e-04  1.3e-04  2.0e-04  3.0e-04   LinDep: 6.7e-15* 
+ Iter:   7 SS: 28   E: -171.19200528  -171.19175023  -171.19130028  -171.19060006   R: 1.3e-04  8.9e-05  1.2e-04  2.0e-04   LinDep: 9.8e-15* 
+ Iter:   8 SS: 32   E: -171.19200529  -171.19175024  -171.19130029  -171.19060008   R: 8.7e-05  5.9e-05  8.5e-05  1.3e-04   LinDep: 8.9e-16* 
+ Iter:   9 SS: 36   E: -171.19200529  -171.19175024  -171.19130029  -171.19060008   R: 5.6e-05  4.1e-05  5.7e-05  8.2e-05   LinDep: 8.0e-15* 
+ Iter:  10 SS: 40   E: -171.19200529  -171.19175024  -171.19130029  -171.19060008   R: 3.3e-05  2.9e-05  3.8e-05  5.0e-05   LinDep: 1.6e-14* 
+ Iter:  11 SS: 44   E: -171.19200529  -171.19175024  -171.19130029  -171.19060008   R: 1.9e-05  1.9e-05  2.4e-05  2.8e-05   LinDep: 2.4e-15* 
+ Iter:  12 SS: 48   E: -171.19200529  -171.19175024  -171.19130030  -171.19060008   R: 1.2e-05  1.3e-05  1.6e-05  1.9e-05   LinDep: 5.6e-15* 
+ Iter:  13 SS: 48   E: -171.19200529* -171.19175024* -171.19130030* -171.19060009   R: 7.4e-06* 7.8e-06* 9.5e-06* 1.1e-05   LinDep: 3.6e-15* 
+ Iter:  14 SS: 48   E: -171.19200529* -171.19175024* -171.19130030* -171.19060009*  R: 5.0e-06* 5.2e-06* 6.4e-06* 7.3e-06*  LinDep: 2.0e-13* 
+ Diagonalization time:                             1513.653609 seconds
+ Compute <S^2>:                                     12.572039 seconds (17.16 M allocations: 8.246 GiB, 81.12% gc time)
+  Root       Energy           S2
+     1 -171.19200529   0.00751387
+     2 -171.19175024   2.00105676
+     3 -171.19130030   5.99300521
+     4 -171.19060009  11.99885313
+ ==================================================================|
+ E(Reference):       -171.17791209 -171.17782286 -171.17719315 -171.17631539 
+ E(PT2):             -171.19126697 -171.19106200 -171.19055544 -171.18980025 
+ E(BST):             -171.19200529 -171.19175024 -171.19130030 -171.19060009 
+
+
+
+
+ ===================================================================
+     BST Iteration:    3 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            474138 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      213.569138 seconds (24.00 M allocations: 165.058 GiB, 84.86% gc time)
+ Compute <S^2>:                                      0.140632 seconds (1.21 M allocations: 542.989 MiB)
+  Root       Energy           S2
+     1 -171.17788879   0.00780258
+     2 -171.17781938   2.00112447
+     3 -171.17720616   5.99292151
+     4 -171.17631508  11.99793120
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.039506 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            2158.665399 seconds (299.27 M allocations: 1.861 TiB, 52.38% gc time, 0.00% compilation time)
+ Now collect thread results :                        0.008139 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68801173 →     66295626
+   Iter:    2     66295626 →     66004540
+   Iter:    3     66004540 →     65950522
+   Iter:    4     65950522 →     65939235
+   Iter:    5     65939235 →     65938895
+   Iter:    6     65938895 →     65938879
+   Iter:    7     65938879 →     65938879
+ Compute Compressed FOIS:                          2468.003286 seconds   2.15e+03 Gb
+ Total time spent building FOIS:                   2468.003286 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65938879
+ Compute <X|H|0>:                                  2767.035301 seconds   1.89e+03 Gb
+ Compute <X|F|0>:                                    1.223538 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337487
+ State   2: E(PT2) corr:                          -0.01324204
+ State   3: E(PT2) corr:                          -0.01335388
+ State   4: E(PT2) corr:                          -0.01348596
+  Root         E(0)         E(2)
+     1 -171.17788879 -171.19126365
+     2 -171.17781938 -171.19106142
+     3 -171.17720616 -171.19056004
+     4 -171.17631508 -171.18980104
+ ......................................................................................|
+ Total time spent building PT1:                    3173.051989 seconds
+ FOIS compressed from:                               65938879 → 6502713    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31043      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.916460 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.007011 seconds (31.30 k allocations: 2.554 MiB)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1037.755944 seconds (70.70 M allocations: 1.307 TiB, 87.26% gc time)
+ Now collect thread results :                        0.002861 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3722428 →      3721493
+   Iter:    2      3721493 →      3721368
+   Iter:    3      3721368 →      3721352
+   Iter:    4      3721352 →      3721352
+   S^2 Residual   0.00789338
+   S^2 Residual   0.00626452
+   S^2 Residual   0.00782413
+   S^2 Residual   0.01328626
+ Compressing S^2 residual vector:
+   Iter:    1      7901125 →        76972
+   Iter:    2        76972 →        71511
+   Iter:    3        71511 →        70285
+   Iter:    4        70285 →        70106
+   Iter:    5        70106 →        70010
+   Iter:    6        70010 →        69974
+   Iter:    7        69974 →        69966
+   Iter:    8        69966 →        69966
+ Variational space increased from:                      31043 → 472394     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            472394
+ Cache Hamiltonian:                                3962.153235 seconds (434.80 M allocations: 2.313 TiB, 72.27% gc time)
+ Iter:   1 SS: 4    E: -171.19199786  -171.19174523  -171.19129215  -171.19058892   R: 4.8e-03  4.4e-03  4.8e-03  5.2e-03   LinDep: 6.7e-16* 
+ Iter:   2 SS: 8    E: -171.19200563  -171.19175122  -171.19130021  -171.19059853   R: 1.6e-03  1.5e-03  1.7e-03  1.7e-03   LinDep: 7.1e-15* 
+ Iter:   3 SS: 12   E: -171.19200661  -171.19175209  -171.19130147  -171.19059966   R: 7.4e-04  6.9e-04  8.9e-04  8.3e-04   LinDep: 5.1e-15* 
+ Iter:   4 SS: 16   E: -171.19200684  -171.19175232  -171.19130183  -171.19059995   R: 3.3e-04  3.6e-04  4.6e-04  4.3e-04   LinDep: 3.1e-15* 
+ Iter:   5 SS: 20   E: -171.19200688  -171.19175239  -171.19130194  -171.19060003   R: 1.8e-04  2.4e-04  3.0e-04  2.4e-04   LinDep: 1.1e-15* 
+ Iter:   6 SS: 24   E: -171.19200690  -171.19175241  -171.19130198  -171.19060006   R: 1.0e-04  1.6e-04  2.2e-04  1.5e-04   LinDep: 1.6e-14* 
+ Iter:   7 SS: 28   E: -171.19200690  -171.19175242  -171.19130200  -171.19060007   R: 6.1e-05  1.0e-04  1.4e-04  9.2e-05   LinDep: 6.9e-15* 
+ Iter:   8 SS: 32   E: -171.19200690  -171.19175243  -171.19130201  -171.19060007   R: 3.6e-05  6.6e-05  9.3e-05  5.6e-05   LinDep: 2.3e-15* 
+ Iter:   9 SS: 36   E: -171.19200690  -171.19175243  -171.19130201  -171.19060007   R: 2.1e-05  3.9e-05  5.7e-05  3.4e-05   LinDep: 2.4e-15* 
+ Iter:  10 SS: 40   E: -171.19200690  -171.19175243  -171.19130201  -171.19060007   R: 1.4e-05  2.4e-05  3.5e-05  2.1e-05   LinDep: 1.6e-14* 
+ Iter:  11 SS: 44   E: -171.19200690* -171.19175243  -171.19130201  -171.19060007   R: 8.4e-06* 1.5e-05  2.0e-05  1.2e-05   LinDep: 1.2e-14* 
+ Iter:  12 SS: 48   E: -171.19200690* -171.19175243* -171.19130201  -171.19060007*  R: 5.6e-06* 8.1e-06* 1.1e-05  7.4e-06*  LinDep: 4.2e-15* 
+ Iter:  13 SS: 48   E: -171.19200690* -171.19175243* -171.19130201* -171.19060007*  R: 3.7e-06* 5.1e-06* 7.0e-06* 4.7e-06*  LinDep: 2.4e-15* 
+ Diagonalization time:                             1417.960050 seconds
+ Compute <S^2>:                                     12.595815 seconds (17.15 M allocations: 8.220 GiB, 81.80% gc time)
+  Root       Energy           S2
+     1 -171.19200690   0.00670132
+     2 -171.19175243   2.00095964
+     3 -171.19130201   5.99377932
+     4 -171.19060007  11.99899347
+ ==================================================================|
+ E(Reference):       -171.17788879 -171.17781938 -171.17720616 -171.17631508 
+ E(PT2):             -171.19126365 -171.19106142 -171.19056004 -171.18980104 
+ E(BST):             -171.19200690 -171.19175243 -171.19130201 -171.19060007 
+
+
+
+
+ ===================================================================
+     BST Iteration:    4 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            472394 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      221.528959 seconds (24.00 M allocations: 166.110 GiB, 85.29% gc time)
+ Compute <S^2>:                                      0.144615 seconds (1.21 M allocations: 543.000 MiB)
+  Root       Energy           S2
+     1 -171.17788932   0.00699236
+     2 -171.17781834   2.00102747
+     3 -171.17720464   5.99368859
+     4 -171.17631396  11.99806849
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.039788 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            2120.810384 seconds (299.31 M allocations: 1.859 TiB, 53.34% gc time, 0.00% compilation time)
+ Now collect thread results :                        0.008211 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68555769 →     66188293
+   Iter:    2     66188293 →     65908915
+   Iter:    3     65908915 →     65855145
+   Iter:    4     65855145 →     65843866
+   Iter:    5     65843866 →     65843486
+   Iter:    6     65843486 →     65843454
+   Iter:    7     65843454 →     65843454
+ Compute Compressed FOIS:                          2425.785506 seconds   2.14e+03 Gb
+ Total time spent building FOIS:                   2425.785506 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65843454
+ Compute <X|H|0>:                                  2766.878513 seconds   1.88e+03 Gb
+ Compute <X|F|0>:                                    1.147008 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337528
+ State   2: E(PT2) corr:                          -0.01324420
+ State   3: E(PT2) corr:                          -0.01335607
+ State   4: E(PT2) corr:                          -0.01348717
+  Root         E(0)         E(2)
+     1 -171.17788932 -171.19126460
+     2 -171.17781834 -171.19106254
+     3 -171.17720464 -171.19056071
+     4 -171.17631396 -171.18980113
+ ......................................................................................|
+ Total time spent building PT1:                    3181.726972 seconds
+ FOIS compressed from:                               65843454 → 6502461    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31098      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.526486 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.007468 seconds (31.30 k allocations: 2.554 MiB)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1042.770847 seconds (70.76 M allocations: 1.309 TiB, 86.97% gc time)
+ Now collect thread results :                        0.002918 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3661799 →      3659010
+   Iter:    2      3659010 →      3658901
+   Iter:    3      3658901 →      3658881
+   Iter:    4      3658881 →      3658881
+   S^2 Residual   0.00787573
+   S^2 Residual   0.00625456
+   S^2 Residual   0.00779780
+   S^2 Residual   0.01333535
+ Compressing S^2 residual vector:
+   Iter:    1      7792653 →        76846
+   Iter:    2        76846 →        71455
+   Iter:    3        71455 →        70345
+   Iter:    4        70345 →        70173
+   Iter:    5        70173 →        70106
+   Iter:    6        70106 →        70079
+   Iter:    7        70079 →        70079
+ Variational space increased from:                      31098 → 473079     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            473079
+ Cache Hamiltonian:                                4072.439082 seconds (435.01 M allocations: 2.319 TiB, 71.51% gc time)
+ Iter:   1 SS: 4    E: -171.19200067  -171.19174787  -171.19129573  -171.19059231   R: 4.1e-03  3.5e-03  4.1e-03  4.7e-03   LinDep: 2.2e-15* 
+ Iter:   2 SS: 8    E: -171.19200703  -171.19175243  -171.19130231  -171.19060087   R: 1.4e-03  1.3e-03  1.5e-03  1.6e-03   LinDep: 2.3e-15* 
+ Iter:   3 SS: 12   E: -171.19200773  -171.19175301  -171.19130318  -171.19060184   R: 6.2e-04  5.6e-04  7.5e-04  7.6e-04   LinDep: 1.1e-15* 
+ Iter:   4 SS: 16   E: -171.19200788  -171.19175315  -171.19130343  -171.19060207   R: 3.1e-04  3.2e-04  4.3e-04  4.0e-04   LinDep: 1.3e-15* 
+ Iter:   5 SS: 20   E: -171.19200792  -171.19175320  -171.19130352  -171.19060214   R: 1.7e-04  2.0e-04  2.6e-04  2.2e-04   LinDep: 8.4e-15* 
+ Iter:   6 SS: 24   E: -171.19200793  -171.19175322  -171.19130355  -171.19060216   R: 1.0e-04  1.4e-04  1.8e-04  1.4e-04   LinDep: 6.2e-15* 
+ Iter:   7 SS: 28   E: -171.19200794  -171.19175323  -171.19130357  -171.19060217   R: 6.1e-05  9.0e-05  1.2e-04  8.9e-05   LinDep: 3.8e-15* 
+ Iter:   8 SS: 32   E: -171.19200794  -171.19175323  -171.19130357  -171.19060218   R: 3.7e-05  6.1e-05  8.1e-05  5.6e-05   LinDep: 1.8e-15* 
+ Iter:   9 SS: 36   E: -171.19200794  -171.19175323  -171.19130358  -171.19060218   R: 2.5e-05  3.9e-05  5.3e-05  3.8e-05   LinDep: 1.6e-14* 
+ Iter:  10 SS: 40   E: -171.19200794  -171.19175323  -171.19130358  -171.19060218   R: 1.6e-05  2.4e-05  3.3e-05  2.6e-05   LinDep: 1.0e-15* 
+ Iter:  11 SS: 44   E: -171.19200794  -171.19175323  -171.19130358  -171.19060218   R: 1.0e-05  1.4e-05  2.0e-05  1.5e-05   LinDep: 9.5e-15* 
+ Iter:  12 SS: 48   E: -171.19200794* -171.19175323* -171.19130358  -171.19060218*  R: 6.5e-06* 8.6e-06* 1.2e-05  8.7e-06*  LinDep: 6.2e-15* 
+ Iter:  13 SS: 48   E: -171.19200794* -171.19175323* -171.19130358* -171.19060218*  R: 4.2e-06* 5.4e-06* 7.4e-06* 5.4e-06*  LinDep: 4.9e-15* 
+ Diagonalization time:                             1418.658345 seconds
+ Compute <S^2>:                                     11.076520 seconds (17.15 M allocations: 8.232 GiB, 79.85% gc time)
+  Root       Energy           S2
+     1 -171.19200794   0.00736943
+     2 -171.19175323   2.00097939
+     3 -171.19130358   5.99310710
+     4 -171.19060218  11.99898159
+ ==================================================================|
+ E(Reference):       -171.17788932 -171.17781834 -171.17720464 -171.17631396 
+ E(PT2):             -171.19126460 -171.19106254 -171.19056071 -171.18980113 
+ E(BST):             -171.19200794 -171.19175323 -171.19130358 -171.19060218 
+
+
+
+
+ ===================================================================
+     BST Iteration:    5 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            473079 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      221.675667 seconds (24.00 M allocations: 165.560 GiB, 85.45% gc time)
+ Compute <S^2>:                                      0.138032 seconds (1.21 M allocations: 542.989 MiB)
+  Root       Energy           S2
+     1 -171.17788904   0.00765768
+     2 -171.17781888   2.00104643
+     3 -171.17720554   5.99302099
+     4 -171.17631425  11.99805091
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.039966 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            2119.681096 seconds (299.23 M allocations: 1.862 TiB, 53.86% gc time)
+ Now collect thread results :                        0.008147 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68539836 →     66235670
+   Iter:    2     66235670 →     65937641
+   Iter:    3     65937641 →     65882654
+   Iter:    4     65882654 →     65869819
+   Iter:    5     65869819 →     65869519
+   Iter:    6     65869519 →     65869519
+ Compute Compressed FOIS:                          2390.510955 seconds   2.13e+03 Gb
+ Total time spent building FOIS:                   2390.510955 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65869519
+ Compute <X|H|0>:                                  2831.241412 seconds   1.88e+03 Gb
+ Compute <X|F|0>:                                    1.203915 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337548
+ State   2: E(PT2) corr:                          -0.01324389
+ State   3: E(PT2) corr:                          -0.01335570
+ State   4: E(PT2) corr:                          -0.01348703
+  Root         E(0)         E(2)
+     1 -171.17788904 -171.19126452
+     2 -171.17781888 -171.19106276
+     3 -171.17720554 -171.19056124
+     4 -171.17631425 -171.18980128
+ ......................................................................................|
+ Total time spent building PT1:                    3249.471774 seconds
+ FOIS compressed from:                               65869519 → 6503667    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31058      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.533365 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.039606 seconds (31.30 k allocations: 2.554 MiB, 76.20% gc time)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1037.022499 seconds (70.75 M allocations: 1.308 TiB, 87.03% gc time)
+ Now collect thread results :                        0.003058 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3710647 →      3709826
+   Iter:    2      3709826 →      3709718
+   Iter:    3      3709718 →      3709694
+   Iter:    4      3709694 →      3709694
+   S^2 Residual   0.00786257
+   S^2 Residual   0.00625216
+   S^2 Residual   0.00779330
+   S^2 Residual   0.01332800
+ Compressing S^2 residual vector:
+   Iter:    1      7884417 →        76858
+   Iter:    2        76858 →        71397
+   Iter:    3        71397 →        70205
+   Iter:    4        70205 →        70039
+   Iter:    5        70039 →        69970
+   Iter:    6        69970 →        69936
+   Iter:    7        69936 →        69936
+ Variational space increased from:                      31058 → 472428     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            472428
+ Cache Hamiltonian:                                4109.969236 seconds (435.34 M allocations: 2.317 TiB, 70.54% gc time)
+ Iter:   1 SS: 4    E: -171.19200069  -171.19174734  -171.19129589  -171.19059197   R: 3.6e-03  3.0e-03  3.6e-03  4.2e-03   LinDep: 3.6e-15* 
+ Iter:   2 SS: 8    E: -171.19200557  -171.19175042  -171.19130075  -171.19059845   R: 1.3e-03  9.8e-04  1.3e-03  1.5e-03   LinDep: 3.7e-15* 
+ Iter:   3 SS: 12   E: -171.19200628  -171.19175079  -171.19130149  -171.19059932   R: 6.7e-04  4.7e-04  6.8e-04  7.5e-04   LinDep: 2.8e-15* 
+ Iter:   4 SS: 16   E: -171.19200645  -171.19175088  -171.19130167  -171.19059953   R: 3.1e-04  2.5e-04  3.2e-04  3.6e-04   LinDep: 4.7e-15* 
+ Iter:   5 SS: 20   E: -171.19200649  -171.19175091  -171.19130171  -171.19059959   R: 1.7e-04  1.5e-04  1.8e-04  1.8e-04   LinDep: 1.2e-14* 
+ Iter:   6 SS: 24   E: -171.19200650  -171.19175092  -171.19130173  -171.19059960   R: 1.2e-04  1.0e-04  1.2e-04  1.1e-04   LinDep: 8.9e-15* 
+ Iter:   7 SS: 28   E: -171.19200651  -171.19175092  -171.19130173  -171.19059961   R: 7.6e-05  7.5e-05  7.5e-05  6.3e-05   LinDep: 3.3e-15* 
+ Iter:   8 SS: 32   E: -171.19200651  -171.19175093  -171.19130174  -171.19059961   R: 4.8e-05  5.3e-05  5.0e-05  3.4e-05   LinDep: 4.0e-15* 
+ Iter:   9 SS: 36   E: -171.19200651  -171.19175093  -171.19130174  -171.19059961   R: 3.2e-05  3.6e-05  3.5e-05  2.1e-05   LinDep: 4.0e-15* 
+ Iter:  10 SS: 40   E: -171.19200651  -171.19175093  -171.19130174  -171.19059961   R: 2.1e-05  2.4e-05  2.3e-05  1.4e-05   LinDep: 1.1e-15* 
+ Iter:  11 SS: 44   E: -171.19200651  -171.19175093  -171.19130174  -171.19059961*  R: 1.3e-05  1.4e-05  1.5e-05  9.0e-06*  LinDep: 8.2e-15* 
+ Iter:  12 SS: 48   E: -171.19200652* -171.19175093* -171.19130174* -171.19059961*  R: 7.5e-06* 8.2e-06* 9.2e-06* 6.0e-06*  LinDep: 2.7e-15* 
+ Diagonalization time:                             1300.135697 seconds
+ Compute <S^2>:                                     11.993616 seconds (17.16 M allocations: 8.222 GiB, 80.91% gc time)
+  Root       Energy           S2
+     1 -171.19200652   0.00762255
+     2 -171.19175093   2.00109414
+     3 -171.19130174   5.99285823
+     4 -171.19059961  11.99885753
+ ==================================================================|
+ E(Reference):       -171.17788904 -171.17781888 -171.17720554 -171.17631425 
+ E(PT2):             -171.19126452 -171.19106276 -171.19056124 -171.18980128 
+ E(BST):             -171.19200652 -171.19175093 -171.19130174 -171.19059961 
+
+ Not converged E(Ref):             -171.17788904 -171.17781888 -171.17720554 -171.17631425 
+ Not converged E(BST):             -171.19200652 -171.19175093 -171.19130174 -171.19059961 
+
+ Energies per BST iteration:
+   Projected Energies: 
+   Iter:   1   -171.17790656 -171.17782863 -171.17721010 -171.17631885 Dim:       588
+   Iter:   2   -171.17791209 -171.17782286 -171.17719315 -171.17631539 Dim:       588
+   Iter:   3   -171.17788879 -171.17781938 -171.17720616 -171.17631508 Dim:       588
+   Iter:   4   -171.17788932 -171.17781834 -171.17720464 -171.17631396 Dim:       588
+   Iter:   5   -171.17788904 -171.17781888 -171.17720554 -171.17631425 Dim:       588
+
+   Variational Energies: 
+   Iter:   1   -171.19195397 -171.19172562 -171.19125017 -171.19055068 Dim:    469163
+   Iter:   2   -171.19200529 -171.19175024 -171.19130030 -171.19060009 Dim:    474138
+   Iter:   3   -171.19200690 -171.19175243 -171.19130201 -171.19060007 Dim:    472394
+   Iter:   4   -171.19200794 -171.19175323 -171.19130358 -171.19060218 Dim:    473079
+   Iter:   5   -171.19200652 -171.19175093 -171.19130174 -171.19059961 Dim:    472428
+ ─────────────────────────────────────────────────────────────────────────
+                                 Time                    Allocations      
+                        ───────────────────────   ────────────────────────
+    Tot / % measured:        16.8h /  98.2%           42.9TiB /  98.1%    
+
+ Section        ncalls     time    %tot     avg     alloc    %tot      avg
+ ─────────────────────────────────────────────────────────────────────────
+ CI big              5    7.54h   45.8%   1.51h   16.0TiB   37.9%  3.20TiB
+ PT1                 5    4.18h   25.4%   3006s   9.77TiB   23.2%  1.95TiB
+ FOIS                5    3.27h   19.9%   2355s   9.76TiB   23.2%  1.95TiB
+ s2 extension        5    1.46h    8.8%   1048s   6.58TiB   15.6%  1.32TiB
+   project           5    2.17s    0.0%   433ms    735MiB    0.0%   147MiB
+ compress           10    92.7s    0.2%   9.27s   33.8GiB    0.1%  3.38GiB
+ add                 5    7.46s    0.0%   1.49s   1.95GiB    0.0%   399MiB
+ S2                  5    716ms    0.0%   143ms   2.65GiB    0.0%   543MiB
+ project             5    581ms    0.0%   116ms    281MiB    0.0%  56.2MiB
+ ─────────────────────────────────────────────────────────────────────────
+ ==================================================================|
+ max_iter         : 5
+ nbody            : 4
+ H0               : Hcmf
+ thresh_var       : 0.007
+ thresh_foi       : 3.0e-5
+ thresh_pt        : 0.00095
+ thresh_spin      : 0.00095
+ ci_conv          : 1.0e-5
+ ci_max_iter      : 50
+ ci_max_ss_vecs   : 12
+ ci_lindep_thresh : 1.0e-10
+ resolve_ss       : false
+ do_pt            : true
+ tol_tucker       : 1.0e-6
+
+
+
+ ===================================================================
+     BST Iteration:    1 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            472428 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      174.524492 seconds (24.00 M allocations: 166.228 GiB, 81.83% gc time)
+ Compute <S^2>:                                      0.146612 seconds (1.21 M allocations: 542.989 MiB)
+  Root       Energy           S2
+     1 -171.17788945   0.00791450
+     2 -171.17781958   2.00116230
+     3 -171.17720653   5.99277144
+     4 -171.17631486  11.99792634
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.039290 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            1903.271667 seconds (299.28 M allocations: 1.862 TiB, 46.73% gc time, 0.02% compilation time)
+ Now collect thread results :                        0.008293 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68497011 →     66226422
+   Iter:    2     66226422 →     65954387
+   Iter:    3     65954387 →     65901829
+   Iter:    4     65901829 →     65889322
+   Iter:    5     65889322 →     65889022
+   Iter:    6     65889022 →     65889022
+ Compute Compressed FOIS:                          2127.281321 seconds   2.13e+03 Gb
+ Total time spent building FOIS:                   2127.281321 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65889022
+ Compute <X|H|0>:                                  2615.081706 seconds   1.88e+03 Gb
+ Compute <X|F|0>:                                    1.043563 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337529
+ State   2: E(PT2) corr:                          -0.01324285
+ State   3: E(PT2) corr:                          -0.01335472
+ State   4: E(PT2) corr:                          -0.01348613
+  Root         E(0)         E(2)
+     1 -171.17788945 -171.19126473
+     2 -171.17781958 -171.19106243
+     3 -171.17720653 -171.19056126
+     4 -171.17631486 -171.18980099
+ ......................................................................................|
+ Total time spent building PT1:                    2986.477213 seconds
+ FOIS compressed from:                               65889022 → 6503087    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31061      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.347820 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.039631 seconds (31.30 k allocations: 2.554 MiB, 76.78% gc time)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1039.776984 seconds (70.81 M allocations: 1.308 TiB, 86.76% gc time)
+ Now collect thread results :                        0.002901 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3687528 →      3686728
+   Iter:    2      3686728 →      3686603
+   Iter:    3      3686603 →      3686583
+   Iter:    4      3686583 →      3686583
+   S^2 Residual   0.00786328
+   S^2 Residual   0.00625346
+   S^2 Residual   0.00778481
+   S^2 Residual   0.01333193
+ Compressing S^2 residual vector:
+   Iter:    1      7843656 →        76789
+   Iter:    2        76789 →        71457
+   Iter:    3        71457 →        70351
+   Iter:    4        70351 →        70190
+   Iter:    5        70190 →        70106
+   Iter:    6        70106 →        70079
+   Iter:    7        70079 →        70079
+ Variational space increased from:                      31061 → 472983     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            472983
+ Cache Hamiltonian:                                4026.205499 seconds (435.46 M allocations: 2.327 TiB, 72.08% gc time)
+ Iter:   1 SS: 4    E: -171.19200138  -171.19174673  -171.19129630  -171.19059341   R: 3.8e-03  3.2e-03  3.8e-03  4.3e-03   LinDep: 8.9e-16* 
+ Iter:   2 SS: 8    E: -171.19200668  -171.19175042  -171.19130173  -171.19060063   R: 1.3e-03  1.1e-03  1.4e-03  1.6e-03   LinDep: 5.6e-15* 
+ Iter:   3 SS: 12   E: -171.19200739  -171.19175094  -171.19130258  -171.19060171   R: 6.2e-04  5.4e-04  7.1e-04  8.1e-04   LinDep: 8.4e-15* 
+ Iter:   4 SS: 16   E: -171.19200755  -171.19175107  -171.19130279  -171.19060198   R: 3.0e-04  2.7e-04  3.6e-04  4.3e-04   LinDep: 2.2e-16* 
+ Iter:   5 SS: 20   E: -171.19200758  -171.19175110  -171.19130285  -171.19060206   R: 1.5e-04  1.5e-04  1.9e-04  2.2e-04   LinDep: 5.8e-15* 
+ Iter:   6 SS: 24   E: -171.19200759  -171.19175111  -171.19130287  -171.19060208   R: 9.0e-05  8.7e-05  1.1e-04  1.2e-04   LinDep: 2.2e-16* 
+ Iter:   7 SS: 28   E: -171.19200760  -171.19175111  -171.19130287  -171.19060209   R: 5.3e-05  4.6e-05  6.2e-05  7.0e-05   LinDep: 1.1e-14* 
+ Iter:   8 SS: 32   E: -171.19200760  -171.19175111  -171.19130287  -171.19060209   R: 3.1e-05  2.7e-05  3.4e-05  3.7e-05   LinDep: 8.2e-15* 
+ Iter:   9 SS: 36   E: -171.19200760  -171.19175111  -171.19130287  -171.19060209   R: 1.9e-05  1.6e-05  2.1e-05  2.3e-05   LinDep: 5.4e-15* 
+ Iter:  10 SS: 40   E: -171.19200760  -171.19175111  -171.19130287  -171.19060209   R: 1.3e-05  1.0e-05  1.3e-05  1.5e-05   LinDep: 8.7e-15* 
+ Iter:  11 SS: 44   E: -171.19200760* -171.19175111* -171.19130287* -171.19060209*  R: 8.6e-06* 6.8e-06* 8.4e-06* 9.8e-06*  LinDep: 4.4e-16* 
+ Diagonalization time:                             1203.003055 seconds
+ Compute <S^2>:                                     12.009806 seconds (17.15 M allocations: 8.233 GiB, 81.18% gc time)
+  Root       Energy           S2
+     1 -171.19200760   0.00866481
+     2 -171.19175111   2.00120094
+     3 -171.19130287   5.99179486
+     4 -171.19060209  11.99877209
+ ==================================================================|
+ E(Reference):       -171.17788945 -171.17781958 -171.17720653 -171.17631486 
+ E(PT2):             -171.19126473 -171.19106243 -171.19056126 -171.18980099 
+ E(BST):             -171.19200760 -171.19175111 -171.19130287 -171.19060209 
+
+
+
+
+ ===================================================================
+     BST Iteration:    2 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            472983 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      222.208552 seconds (24.00 M allocations: 167.544 GiB, 85.68% gc time)
+ Compute <S^2>:                                      0.139622 seconds (1.21 M allocations: 542.992 MiB)
+  Root       Energy           S2
+     1 -171.17788817   0.00895092
+     2 -171.17781934   2.00126630
+     3 -171.17720653   5.99171333
+     4 -171.17631399  11.99784398
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.038957 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            2118.169958 seconds (299.27 M allocations: 1.862 TiB, 54.16% gc time, 0.03% compilation time)
+ Now collect thread results :                        0.007961 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68518806 →     66236004
+   Iter:    2     66236004 →     65953824
+   Iter:    3     65953824 →     65899696
+   Iter:    4     65899696 →     65886737
+   Iter:    5     65886737 →     65886417
+   Iter:    6     65886417 →     65886409
+   Iter:    7     65886409 →     65886409
+ Compute Compressed FOIS:                          2427.508655 seconds   2.15e+03 Gb
+ Total time spent building FOIS:                   2427.508655 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65886409
+ Compute <X|H|0>:                                  2871.824414 seconds   1.89e+03 Gb
+ Compute <X|F|0>:                                    1.239972 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337722
+ State   2: E(PT2) corr:                          -0.01324416
+ State   3: E(PT2) corr:                          -0.01335650
+ State   4: E(PT2) corr:                          -0.01348851
+  Root         E(0)         E(2)
+     1 -171.17788817 -171.19126539
+     2 -171.17781934 -171.19106350
+     3 -171.17720653 -171.19056303
+     4 -171.17631399 -171.18980250
+ ......................................................................................|
+ Total time spent building PT1:                    3302.176068 seconds
+ FOIS compressed from:                               65886409 → 6504603    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31080      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.522557 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.041120 seconds (31.30 k allocations: 2.554 MiB, 75.74% gc time)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1059.194652 seconds (70.80 M allocations: 1.309 TiB, 87.25% gc time)
+ Now collect thread results :                        0.002943 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3721681 →      3720915
+   Iter:    2      3720915 →      3720795
+   Iter:    3      3720795 →      3720773
+   Iter:    4      3720773 →      3720773
+   S^2 Residual   0.00787306
+   S^2 Residual   0.00625904
+   S^2 Residual   0.00778828
+   S^2 Residual   0.01332613
+ Compressing S^2 residual vector:
+   Iter:    1      7903308 →        76930
+   Iter:    2        76930 →        71413
+   Iter:    3        71413 →        70299
+   Iter:    4        70299 →        70153
+   Iter:    5        70153 →        70076
+   Iter:    6        70076 →        70042
+   Iter:    7        70042 →        70039
+   Iter:    8        70039 →        70039
+ Variational space increased from:                      31080 → 472889     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            472889
+ Cache Hamiltonian:                                4049.165076 seconds (434.90 M allocations: 2.302 TiB, 71.68% gc time)
+ Iter:   1 SS: 4    E: -171.19200341  -171.19174777  -171.19129822  -171.19059650   R: 3.7e-03  3.6e-03  3.7e-03  3.6e-03   LinDep: 4.4e-16* 
+ Iter:   2 SS: 8    E: -171.19200844  -171.19175216  -171.19130331  -171.19060142   R: 1.5e-03  1.3e-03  1.5e-03  1.4e-03   LinDep: 2.0e-15* 
+ Iter:   3 SS: 12   E: -171.19200928  -171.19175280  -171.19130423  -171.19060227   R: 6.9e-04  5.7e-04  7.3e-04  7.5e-04   LinDep: 1.1e-15* 
+ Iter:   4 SS: 16   E: -171.19200946  -171.19175295  -171.19130444  -171.19060248   R: 3.0e-04  2.9e-04  3.4e-04  3.5e-04   LinDep: 6.7e-15* 
+ Iter:   5 SS: 20   E: -171.19200950  -171.19175299  -171.19130450  -171.19060253   R: 1.6e-04  1.7e-04  1.9e-04  1.8e-04   LinDep: 2.7e-15* 
+ Iter:   6 SS: 24   E: -171.19200951  -171.19175300  -171.19130451  -171.19060255   R: 9.5e-05  9.2e-05  1.1e-04  1.1e-04   LinDep: 1.6e-15* 
+ Iter:   7 SS: 28   E: -171.19200952  -171.19175300  -171.19130452  -171.19060255   R: 5.2e-05  4.9e-05  5.8e-05  6.0e-05   LinDep: 1.1e-14* 
+ Iter:   8 SS: 32   E: -171.19200952  -171.19175300  -171.19130452  -171.19060255   R: 2.9e-05  2.8e-05  3.2e-05  3.3e-05   LinDep: 1.6e-15* 
+ Iter:   9 SS: 36   E: -171.19200952  -171.19175301  -171.19130452  -171.19060256   R: 1.8e-05  1.6e-05  2.0e-05  2.1e-05   LinDep: 7.3e-15* 
+ Iter:  10 SS: 40   E: -171.19200952  -171.19175301  -171.19130452  -171.19060256   R: 1.1e-05  1.1e-05  1.3e-05  1.3e-05   LinDep: 9.1e-15* 
+ Iter:  11 SS: 44   E: -171.19200952* -171.19175301* -171.19130452* -171.19060256*  R: 7.2e-06* 7.0e-06* 8.6e-06* 8.4e-06*  LinDep: 1.0e-14* 
+ Diagonalization time:                             1207.734330 seconds
+ Compute <S^2>:                                     12.596022 seconds (17.16 M allocations: 8.228 GiB, 81.83% gc time)
+  Root       Energy           S2
+     1 -171.19200952   0.00879332
+     2 -171.19175301   2.00109004
+     3 -171.19130452   5.99167390
+     4 -171.19060256  11.99887518
+ ==================================================================|
+ E(Reference):       -171.17788817 -171.17781934 -171.17720653 -171.17631399 
+ E(PT2):             -171.19126539 -171.19106350 -171.19056303 -171.18980250 
+ E(BST):             -171.19200952 -171.19175301 -171.19130452 -171.19060256 
+
+
+
+
+ ===================================================================
+     BST Iteration:    3 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            472889 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      219.417839 seconds (24.00 M allocations: 165.490 GiB, 85.74% gc time)
+ Compute <S^2>:                                      0.140451 seconds (1.21 M allocations: 542.994 MiB)
+  Root       Energy           S2
+     1 -171.17788845   0.00908379
+     2 -171.17781950   2.00115558
+     3 -171.17720693   5.99159068
+     4 -171.17631316  11.99794293
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.039459 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            2131.561493 seconds (299.27 M allocations: 1.859 TiB, 53.90% gc time, 0.01% compilation time)
+ Now collect thread results :                        0.008657 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68542035 →     66289508
+   Iter:    2     66289508 →     66015657
+   Iter:    3     66015657 →     65962403
+   Iter:    4     65962403 →     65949697
+   Iter:    5     65949697 →     65949397
+   Iter:    6     65949397 →     65949397
+ Compute Compressed FOIS:                          2403.113361 seconds   2.13e+03 Gb
+ Total time spent building FOIS:                   2403.113361 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65949397
+ Compute <X|H|0>:                                  2925.065196 seconds   1.89e+03 Gb
+ Compute <X|F|0>:                                    1.432329 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337766
+ State   2: E(PT2) corr:                          -0.01324534
+ State   3: E(PT2) corr:                          -0.01335696
+ State   4: E(PT2) corr:                          -0.01348952
+  Root         E(0)         E(2)
+     1 -171.17788845 -171.19126612
+     2 -171.17781950 -171.19106484
+     3 -171.17720693 -171.19056388
+     4 -171.17631316 -171.18980268
+ ......................................................................................|
+ Total time spent building PT1:                    3341.523890 seconds
+ FOIS compressed from:                               65949397 → 6501959    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31053      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.458022 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.006844 seconds (31.30 k allocations: 2.554 MiB)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1053.818182 seconds (70.75 M allocations: 1.308 TiB, 87.17% gc time)
+ Now collect thread results :                        0.002881 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3721282 →      3720678
+   Iter:    2      3720678 →      3720572
+   Iter:    3      3720572 →      3720548
+   Iter:    4      3720548 →      3720548
+   S^2 Residual   0.00785745
+   S^2 Residual   0.00624510
+   S^2 Residual   0.00777793
+   S^2 Residual   0.01330924
+ Compressing S^2 residual vector:
+   Iter:    1      7901818 →        76857
+   Iter:    2        76857 →        71426
+   Iter:    3        71426 →        70320
+   Iter:    4        70320 →        70159
+   Iter:    5        70159 →        70090
+   Iter:    6        70090 →        70057
+   Iter:    7        70057 →        70054
+   Iter:    8        70054 →        70054
+ Variational space increased from:                      31053 → 472889     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            472889
+ Cache Hamiltonian:                                4029.760653 seconds (435.01 M allocations: 2.323 TiB, 72.21% gc time)
+ Iter:   1 SS: 4    E: -171.19200283  -171.19174735  -171.19129757  -171.19059545   R: 3.3e-03  2.8e-03  3.2e-03  3.6e-03   LinDep: 8.9e-16* 
+ Iter:   2 SS: 8    E: -171.19200663  -171.19175000  -171.19130134  -171.19060017   R: 1.1e-03  9.3e-04  1.1e-03  1.3e-03   LinDep: 1.6e-15* 
+ Iter:   3 SS: 12   E: -171.19200712  -171.19175032  -171.19130187  -171.19060087   R: 5.4e-04  4.0e-04  5.7e-04  6.7e-04   LinDep: 3.8e-15* 
+ Iter:   4 SS: 16   E: -171.19200723  -171.19175039  -171.19130199  -171.19060104   R: 2.6e-04  2.1e-04  2.8e-04  3.4e-04   LinDep: 3.3e-15* 
+ Iter:   5 SS: 20   E: -171.19200726  -171.19175040  -171.19130202  -171.19060108   R: 1.3e-04  1.1e-04  1.5e-04  1.7e-04   LinDep: 1.2e-15* 
+ Iter:   6 SS: 24   E: -171.19200727  -171.19175041  -171.19130203  -171.19060109   R: 7.7e-05  6.2e-05  8.6e-05  1.0e-04   LinDep: 1.2e-14* 
+ Iter:   7 SS: 28   E: -171.19200727  -171.19175041  -171.19130204  -171.19060110   R: 4.3e-05  3.4e-05  4.7e-05  5.3e-05   LinDep: 2.8e-15* 
+ Iter:   8 SS: 32   E: -171.19200727  -171.19175041  -171.19130204  -171.19060110   R: 2.4e-05  2.0e-05  2.6e-05  2.8e-05   LinDep: 8.0e-15* 
+ Iter:   9 SS: 36   E: -171.19200727  -171.19175041  -171.19130204  -171.19060110   R: 1.6e-05  1.3e-05  1.7e-05  1.9e-05   LinDep: 2.3e-15* 
+ Iter:  10 SS: 40   E: -171.19200727* -171.19175041* -171.19130204  -171.19060110   R: 9.7e-06* 8.5e-06* 1.1e-05  1.2e-05   LinDep: 3.8e-15* 
+ Iter:  11 SS: 44   E: -171.19200727* -171.19175041* -171.19130204* -171.19060110*  R: 6.5e-06* 5.8e-06* 7.5e-06* 7.7e-06*  LinDep: 3.4e-15* 
+ Diagonalization time:                             1205.441512 seconds
+ Compute <S^2>:                                     11.946232 seconds (17.03 M allocations: 8.221 GiB, 81.51% gc time)
+  Root       Energy           S2
+     1 -171.19200727   0.00862150
+     2 -171.19175041   2.00116405
+     3 -171.19130204   5.99193423
+     4 -171.19060110  11.99871088
+ ==================================================================|
+ E(Reference):       -171.17788845 -171.17781950 -171.17720693 -171.17631316 
+ E(PT2):             -171.19126612 -171.19106484 -171.19056388 -171.18980268 
+ E(BST):             -171.19200727 -171.19175041 -171.19130204 -171.19060110 
+
+
+
+
+ ===================================================================
+     BST Iteration:    4 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            472889 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      227.810855 seconds (24.05 M allocations: 168.301 GiB, 85.91% gc time)
+ Compute <S^2>:                                      0.139502 seconds (1.21 M allocations: 543.002 MiB)
+  Root       Energy           S2
+     1 -171.17788979   0.00891224
+     2 -171.17782037   2.00122998
+     3 -171.17720814   5.99185157
+     4 -171.17631532  11.99778049
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.040665 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            2107.041296 seconds (299.29 M allocations: 1.860 TiB, 54.91% gc time)
+ Now collect thread results :                        0.007576 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68559466 →     66301143
+   Iter:    2     66301143 →     66028536
+   Iter:    3     66028536 →     65976200
+   Iter:    4     65976200 →     65962229
+   Iter:    5     65962229 →     65961909
+   Iter:    6     65961909 →     65961901
+   Iter:    7     65961901 →     65961901
+ Compute Compressed FOIS:                          2438.642168 seconds   2.15e+03 Gb
+ Total time spent building FOIS:                   2438.642168 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65961901
+ Compute <X|H|0>:                                  2911.179327 seconds   1.89e+03 Gb
+ Compute <X|F|0>:                                    1.171312 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337600
+ State   2: E(PT2) corr:                          -0.01324361
+ State   3: E(PT2) corr:                          -0.01335474
+ State   4: E(PT2) corr:                          -0.01348701
+  Root         E(0)         E(2)
+     1 -171.17788979 -171.19126579
+     2 -171.17782037 -171.19106398
+     3 -171.17720814 -171.19056289
+     4 -171.17631532 -171.18980233
+ ......................................................................................|
+ Total time spent building PT1:                    3341.650150 seconds
+ FOIS compressed from:                               65961901 → 6499205    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31053      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.940895 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.006767 seconds (31.30 k allocations: 2.554 MiB)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1059.703285 seconds (70.74 M allocations: 1.308 TiB, 87.35% gc time)
+ Now collect thread results :                        0.002703 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3726802 →      3726080
+   Iter:    2      3726080 →      3725973
+   Iter:    3      3725973 →      3725953
+   Iter:    4      3725953 →      3725953
+   S^2 Residual   0.00784398
+   S^2 Residual   0.00623797
+   S^2 Residual   0.00778286
+   S^2 Residual   0.01331180
+ Compressing S^2 residual vector:
+   Iter:    1      7910401 →        76875
+   Iter:    2        76875 →        71432
+   Iter:    3        71432 →        70324
+   Iter:    4        70324 →        70175
+   Iter:    5        70175 →        70099
+   Iter:    6        70099 →        70074
+   Iter:    7        70074 →        70074
+ Variational space increased from:                      31053 → 473004     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            473004
+ Cache Hamiltonian:                                4093.111351 seconds (435.39 M allocations: 2.306 TiB, 71.39% gc time)
+ Iter:   1 SS: 4    E: -171.19200312  -171.19174652  -171.19129741  -171.19059625   R: 3.3e-03  3.0e-03  3.3e-03  3.6e-03   LinDep: 1.4e-15* 
+ Iter:   2 SS: 8    E: -171.19200722  -171.19174975  -171.19130170  -171.19060134   R: 1.2e-03  9.9e-04  1.3e-03  1.4e-03   LinDep: 1.4e-15* 
+ Iter:   3 SS: 12   E: -171.19200778  -171.19175012  -171.19130238  -171.19060213   R: 5.8e-04  4.7e-04  6.5e-04  7.2e-04   LinDep: 3.3e-15* 
+ Iter:   4 SS: 16   E: -171.19200791  -171.19175022  -171.19130255  -171.19060233   R: 2.8e-04  2.5e-04  3.3e-04  3.6e-04   LinDep: 5.8e-15* 
+ Iter:   5 SS: 20   E: -171.19200794  -171.19175024  -171.19130259  -171.19060238   R: 1.4e-04  1.3e-04  1.7e-04  1.9e-04   LinDep: 4.9e-15* 
+ Iter:   6 SS: 24   E: -171.19200795  -171.19175025  -171.19130260  -171.19060239   R: 8.4e-05  7.5e-05  1.0e-04  1.1e-04   LinDep: 8.4e-15* 
+ Iter:   7 SS: 28   E: -171.19200795  -171.19175025  -171.19130261  -171.19060240   R: 4.3e-05  3.8e-05  5.1e-05  5.8e-05   LinDep: 5.6e-15* 
+ Iter:   8 SS: 32   E: -171.19200795  -171.19175025  -171.19130261  -171.19060240   R: 2.3e-05  2.1e-05  2.8e-05  3.0e-05   LinDep: 7.3e-15* 
+ Iter:   9 SS: 36   E: -171.19200795  -171.19175025  -171.19130261  -171.19060240   R: 1.5e-05  1.4e-05  1.9e-05  1.9e-05   LinDep: 3.3e-15* 
+ Iter:  10 SS: 40   E: -171.19200795* -171.19175025* -171.19130261  -171.19060240   R: 9.2e-06* 9.3e-06* 1.2e-05  1.1e-05   LinDep: 2.6e-15* 
+ Iter:  11 SS: 44   E: -171.19200795* -171.19175025* -171.19130261* -171.19060240*  R: 6.2e-06* 6.4e-06* 7.9e-06* 7.1e-06*  LinDep: 6.2e-15* 
+ Diagonalization time:                             1214.860077 seconds
+ Compute <S^2>:                                     12.441573 seconds (17.08 M allocations: 8.227 GiB, 81.67% gc time)
+  Root       Energy           S2
+     1 -171.19200795   0.00927083
+     2 -171.19175025   2.00134347
+     3 -171.19130261   5.99119617
+     4 -171.19060240  11.99861590
+ ==================================================================|
+ E(Reference):       -171.17788979 -171.17782037 -171.17720814 -171.17631532 
+ E(PT2):             -171.19126579 -171.19106398 -171.19056289 -171.18980233 
+ E(BST):             -171.19200795 -171.19175025 -171.19130261 -171.19060240 
+
+
+
+
+ ===================================================================
+     BST Iteration:    5 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            473004 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      221.724742 seconds (24.07 M allocations: 165.037 GiB, 85.61% gc time)
+ Compute <S^2>:                                      0.146016 seconds (1.21 M allocations: 543.072 MiB)
+  Root       Energy           S2
+     1 -171.17788950   0.00956203
+     2 -171.17782148   2.00140889
+     3 -171.17720898   5.99111728
+     4 -171.17631503  11.99768627
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.041250 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            2164.630351 seconds (299.41 M allocations: 1.861 TiB, 54.03% gc time)
+ Now collect thread results :                        0.008201 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68534808 →     66345307
+   Iter:    2     66345307 →     66077339
+   Iter:    3     66077339 →     66024004
+   Iter:    4     66024004 →     66011077
+   Iter:    5     66011077 →     66010777
+   Iter:    6     66010777 →     66010777
+ Compute Compressed FOIS:                          2433.801930 seconds   2.13e+03 Gb
+ Total time spent building FOIS:                   2433.801930 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          66010777
+ Compute <X|H|0>:                                  2875.140045 seconds   1.90e+03 Gb
+ Compute <X|F|0>:                                    1.093760 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337616
+ State   2: E(PT2) corr:                          -0.01324241
+ State   3: E(PT2) corr:                          -0.01335449
+ State   4: E(PT2) corr:                          -0.01348742
+  Root         E(0)         E(2)
+     1 -171.17788950 -171.19126566
+     2 -171.17782148 -171.19106389
+     3 -171.17720898 -171.19056347
+     4 -171.17631503 -171.18980245
+ ......................................................................................|
+ Total time spent building PT1:                    3305.425777 seconds
+ FOIS compressed from:                               66010777 → 6496877    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31069      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.598519 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.006916 seconds (31.30 k allocations: 2.554 MiB)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1050.853460 seconds (70.76 M allocations: 1.308 TiB, 87.35% gc time)
+ Now collect thread results :                        0.002894 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3751561 →      3750874
+   Iter:    2      3750874 →      3750760
+   Iter:    3      3750760 →      3750746
+   Iter:    4      3750746 →      3750746
+   S^2 Residual   0.00785620
+   S^2 Residual   0.00624062
+   S^2 Residual   0.00777199
+   S^2 Residual   0.01330905
+ Compressing S^2 residual vector:
+   Iter:    1      7955847 →        76884
+   Iter:    2        76884 →        71391
+   Iter:    3        71391 →        70299
+   Iter:    4        70299 →        70121
+   Iter:    5        70121 →        70037
+   Iter:    6        70037 →        70008
+   Iter:    7        70008 →        70008
+ Variational space increased from:                      31069 → 472800     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            472800
+ Cache Hamiltonian:                                4043.346479 seconds (435.02 M allocations: 2.322 TiB, 71.98% gc time)
+ Iter:   1 SS: 4    E: -171.19200288  -171.19174625  -171.19129686  -171.19059553   R: 3.2e-03  3.0e-03  3.2e-03  3.3e-03   LinDep: 2.2e-16* 
+ Iter:   2 SS: 8    E: -171.19200640  -171.19174922  -171.19130042  -171.19059960   R: 1.2e-03  1.0e-03  1.2e-03  1.3e-03   LinDep: 2.2e-16* 
+ Iter:   3 SS: 12   E: -171.19200692  -171.19174961  -171.19130101  -171.19060028   R: 5.7e-04  4.6e-04  6.2e-04  6.8e-04   LinDep: 5.8e-15* 
+ Iter:   4 SS: 16   E: -171.19200705  -171.19174970  -171.19130116  -171.19060045   R: 2.6e-04  2.2e-04  2.9e-04  3.2e-04   LinDep: 6.7e-15* 
+ Iter:   5 SS: 20   E: -171.19200708  -171.19174972  -171.19130120  -171.19060049   R: 1.4e-04  1.2e-04  1.6e-04  1.7e-04   LinDep: 7.5e-15* 
+ Iter:   6 SS: 24   E: -171.19200708  -171.19174973  -171.19130121  -171.19060051   R: 8.0e-05  6.9e-05  9.0e-05  9.7e-05   LinDep: 3.3e-15* 
+ Iter:   7 SS: 28   E: -171.19200709  -171.19174973  -171.19130121  -171.19060051   R: 4.3e-05  3.7e-05  4.9e-05  5.1e-05   LinDep: 3.3e-15* 
+ Iter:   8 SS: 32   E: -171.19200709  -171.19174973  -171.19130121  -171.19060051   R: 2.4e-05  2.2e-05  2.8e-05  2.7e-05   LinDep: 1.4e-15* 
+ Iter:   9 SS: 36   E: -171.19200709  -171.19174973  -171.19130121  -171.19060051   R: 1.5e-05  1.4e-05  1.8e-05  1.7e-05   LinDep: 9.1e-15* 
+ Iter:  10 SS: 40   E: -171.19200709* -171.19174973* -171.19130121  -171.19060051   R: 9.1e-06* 9.1e-06* 1.1e-05  1.0e-05   LinDep: 2.2e-15* 
+ Iter:  11 SS: 44   E: -171.19200709* -171.19174973* -171.19130121* -171.19060051*  R: 5.8e-06* 6.1e-06* 7.3e-06* 6.2e-06*  LinDep: 2.1e-14* 
+ Diagonalization time:                             1207.855087 seconds
+ Compute <S^2>:                                     11.888238 seconds (17.04 M allocations: 8.220 GiB, 80.84% gc time)
+  Root       Energy           S2
+     1 -171.19200709   0.00907872
+     2 -171.19174973   2.00119389
+     3 -171.19130121   5.99140462
+     4 -171.19060051  11.99874915
+ ==================================================================|
+ E(Reference):       -171.17788950 -171.17782148 -171.17720898 -171.17631503 
+ E(PT2):             -171.19126566 -171.19106389 -171.19056347 -171.18980245 
+ E(BST):             -171.19200709 -171.19174973 -171.19130121 -171.19060051 
+
+ Not converged E(Ref):             -171.17788950 -171.17782148 -171.17720898 -171.17631503 
+ Not converged E(BST):             -171.19200709 -171.19174973 -171.19130121 -171.19060051 
+
+ Energies per BST iteration:
+   Projected Energies: 
+   Iter:   1   -171.17788945 -171.17781958 -171.17720653 -171.17631486 Dim:       588
+   Iter:   2   -171.17788817 -171.17781934 -171.17720653 -171.17631399 Dim:       588
+   Iter:   3   -171.17788845 -171.17781950 -171.17720693 -171.17631316 Dim:       588
+   Iter:   4   -171.17788979 -171.17782037 -171.17720814 -171.17631532 Dim:       588
+   Iter:   5   -171.17788950 -171.17782148 -171.17720898 -171.17631503 Dim:       588
+
+   Variational Energies: 
+   Iter:   1   -171.19200760 -171.19175111 -171.19130287 -171.19060209 Dim:    472983
+   Iter:   2   -171.19200952 -171.19175301 -171.19130452 -171.19060256 Dim:    472889
+   Iter:   3   -171.19200727 -171.19175041 -171.19130204 -171.19060110 Dim:    472889
+   Iter:   4   -171.19200795 -171.19175025 -171.19130261 -171.19060240 Dim:    473004
+   Iter:   5   -171.19200709 -171.19174973 -171.19130121 -171.19060051 Dim:    472800
+ ─────────────────────────────────────────────────────────────────────────
+                                 Time                    Allocations      
+                        ───────────────────────   ────────────────────────
+    Tot / % measured:        17.0h /  98.2%           42.3TiB /  98.1%    
+
+ Section        ncalls     time    %tot     avg     alloc    %tot      avg
+ ─────────────────────────────────────────────────────────────────────────
+ CI big              5    7.32h   44.0%   1.46h   15.3TiB   36.9%  3.07TiB
+ PT1                 5    4.52h   27.2%   3255s   9.83TiB   23.7%  1.97TiB
+ FOIS                5    3.29h   19.7%   2366s   9.72TiB   23.4%  1.94TiB
+ s2 extension        5    1.49h    9.0%   1075s   6.58TiB   15.9%  1.32TiB
+   project           5    2.03s    0.0%   406ms    738MiB    0.0%   148MiB
+ compress           10    94.4s    0.2%   9.44s   33.8GiB    0.1%  3.38GiB
+ add                 5    6.90s    0.0%   1.38s   1.93GiB    0.0%   395MiB
+ S2                  5    712ms    0.0%   142ms   2.65GiB    0.0%   543MiB
+ project             5    534ms    0.0%   107ms    282MiB    0.0%  56.3MiB
+ ─────────────────────────────────────────────────────────────────────────
+ ==================================================================|
+ max_iter         : 5
+ nbody            : 4
+ H0               : Hcmf
+ thresh_var       : 0.007
+ thresh_foi       : 3.0e-5
+ thresh_pt        : 0.00095
+ thresh_spin      : 0.00095
+ ci_conv          : 1.0e-5
+ ci_max_iter      : 50
+ ci_max_ss_vecs   : 12
+ ci_lindep_thresh : 1.0e-10
+ resolve_ss       : false
+ do_pt            : true
+ tol_tucker       : 1.0e-6
+
+
+
+ ===================================================================
+     BST Iteration:    1 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            472800 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      180.929388 seconds (24.07 M allocations: 166.113 GiB, 82.12% gc time)
+ Compute <S^2>:                                      0.140018 seconds (1.21 M allocations: 543.038 MiB)
+  Root       Energy           S2
+     1 -171.17788990   0.00936896
+     2 -171.17782119   2.00125972
+     3 -171.17720902   5.99132500
+     4 -171.17631528  11.99781928
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.043355 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            1896.159413 seconds (299.41 M allocations: 1.862 TiB, 47.53% gc time)
+ Now collect thread results :                        0.008620 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68507269 →     66275306
+   Iter:    2     66275306 →     65989846
+   Iter:    3     65989846 →     65939198
+   Iter:    4     65939198 →     65925838
+   Iter:    5     65925838 →     65925538
+   Iter:    6     65925538 →     65925538
+ Compute Compressed FOIS:                          2130.879913 seconds   2.13e+03 Gb
+ Total time spent building FOIS:                   2130.879913 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65925538
+ Compute <X|H|0>:                                  2623.809033 seconds   1.89e+03 Gb
+ Compute <X|F|0>:                                    1.097631 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337634
+ State   2: E(PT2) corr:                          -0.01324309
+ State   3: E(PT2) corr:                          -0.01335447
+ State   4: E(PT2) corr:                          -0.01348734
+  Root         E(0)         E(2)
+     1 -171.17788990 -171.19126624
+     2 -171.17782119 -171.19106429
+     3 -171.17720902 -171.19056349
+     4 -171.17631528 -171.18980262
+ ......................................................................................|
+ Total time spent building PT1:                    2998.554622 seconds
+ FOIS compressed from:                               65925538 → 6498360    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31038      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.332384 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.006646 seconds (31.30 k allocations: 2.554 MiB)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1041.450784 seconds (70.82 M allocations: 1.308 TiB, 87.04% gc time)
+ Now collect thread results :                        0.002792 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3713268 →      3712519
+   Iter:    2      3712519 →      3712390
+   Iter:    3      3712390 →      3712368
+   Iter:    4      3712368 →      3712368
+   S^2 Residual   0.00785293
+   S^2 Residual   0.00624150
+   S^2 Residual   0.00778447
+   S^2 Residual   0.01330249
+ Compressing S^2 residual vector:
+   Iter:    1      7891137 →        76830
+   Iter:    2        76830 →        71340
+   Iter:    3        71340 →        70284
+   Iter:    4        70284 →        70161
+   Iter:    5        70161 →        70099
+   Iter:    6        70099 →        70079
+   Iter:    7        70079 →        70079
+ Variational space increased from:                      31038 → 472930     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            472930
+ Cache Hamiltonian:                                3990.770648 seconds (435.42 M allocations: 2.333 TiB, 72.48% gc time)
+ Iter:   1 SS: 4    E: -171.19200337  -171.19174690  -171.19129729  -171.19059570   R: 3.3e-03  2.6e-03  3.2e-03  3.6e-03   LinDep: 1.1e-15* 
+ Iter:   2 SS: 8    E: -171.19200749  -171.19174943  -171.19130125  -171.19060059   R: 1.3e-03  8.6e-04  1.3e-03  1.4e-03   LinDep: 3.3e-15* 
+ Iter:   3 SS: 12   E: -171.19200816  -171.19174975  -171.19130194  -171.19060143   R: 6.6e-04  4.3e-04  6.8e-04  7.8e-04   LinDep: 4.9e-15* 
+ Iter:   4 SS: 16   E: -171.19200832  -171.19174982  -171.19130211  -171.19060166   R: 2.9e-04  2.2e-04  3.1e-04  3.5e-04   LinDep: 2.2e-15* 
+ Iter:   5 SS: 20   E: -171.19200835  -171.19174984  -171.19130215  -171.19060171   R: 1.5e-04  1.1e-04  1.6e-04  1.8e-04   LinDep: 7.1e-15* 
+ Iter:   6 SS: 24   E: -171.19200836  -171.19174984  -171.19130217  -171.19060172   R: 8.9e-05  6.4e-05  9.6e-05  1.1e-04   LinDep: 3.3e-16* 
+ Iter:   7 SS: 28   E: -171.19200837  -171.19174984  -171.19130217  -171.19060173   R: 4.8e-05  3.6e-05  5.2e-05  5.6e-05   LinDep: 5.1e-15* 
+ Iter:   8 SS: 32   E: -171.19200837  -171.19174985  -171.19130217  -171.19060173   R: 2.6e-05  2.1e-05  2.9e-05  2.9e-05   LinDep: 3.1e-15* 
+ Iter:   9 SS: 36   E: -171.19200837  -171.19174985  -171.19130217  -171.19060173   R: 1.6e-05  1.3e-05  1.9e-05  1.8e-05   LinDep: 4.4e-15* 
+ Iter:  10 SS: 40   E: -171.19200837  -171.19174985* -171.19130217  -171.19060173   R: 1.0e-05  8.6e-06* 1.2e-05  1.1e-05   LinDep: 1.2e-15* 
+ Iter:  11 SS: 44   E: -171.19200837* -171.19174985* -171.19130217* -171.19060173*  R: 6.5e-06* 5.9e-06* 8.1e-06* 7.3e-06*  LinDep: 1.1e-14* 
+ Diagonalization time:                             1202.538368 seconds
+ Compute <S^2>:                                     11.962390 seconds (17.03 M allocations: 8.220 GiB, 80.88% gc time)
+  Root       Energy           S2
+     1 -171.19200837   0.00989578
+     2 -171.19174985   2.00134450
+     3 -171.19130217   5.99057361
+     4 -171.19060173  11.99861589
+ ==================================================================|
+ E(Reference):       -171.17788990 -171.17782119 -171.17720902 -171.17631528 
+ E(PT2):             -171.19126624 -171.19106429 -171.19056349 -171.18980262 
+ E(BST):             -171.19200837 -171.19174985 -171.19130217 -171.19060173 
+
+
+
+
+ ===================================================================
+     BST Iteration:    2 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            472930 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      220.230974 seconds (24.07 M allocations: 163.262 GiB, 85.38% gc time)
+ Compute <S^2>:                                      0.151643 seconds (1.22 M allocations: 543.238 MiB)
+  Root       Energy           S2
+     1 -171.17788916   0.01018633
+     2 -171.17782120   2.00141018
+     3 -171.17720960   5.99049326
+     4 -171.17631453  11.99768535
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.045563 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            2159.368099 seconds (299.78 M allocations: 1.861 TiB, 52.85% gc time)
+ Now collect thread results :                        0.008025 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68544673 →     66228622
+   Iter:    2     66228622 →     65947182
+   Iter:    3     65947182 →     65893914
+   Iter:    4     65893914 →     65879405
+   Iter:    5     65879405 →     65879105
+   Iter:    6     65879105 →     65879105
+ Compute Compressed FOIS:                          2428.298579 seconds   2.13e+03 Gb
+ Total time spent building FOIS:                   2428.298579 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65879105
+ Compute <X|H|0>:                                  2824.022881 seconds   1.89e+03 Gb
+ Compute <X|F|0>:                                    1.446707 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337754
+ State   2: E(PT2) corr:                          -0.01324362
+ State   3: E(PT2) corr:                          -0.01335497
+ State   4: E(PT2) corr:                          -0.01348896
+  Root         E(0)         E(2)
+     1 -171.17788916 -171.19126670
+     2 -171.17782120 -171.19106482
+     3 -171.17720960 -171.19056457
+     4 -171.17631453 -171.18980349
+ ......................................................................................|
+ Total time spent building PT1:                    3253.622930 seconds
+ FOIS compressed from:                               65879105 → 6496737    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31022      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.568618 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.006980 seconds (31.30 k allocations: 2.554 MiB)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1046.850839 seconds (70.76 M allocations: 1.308 TiB, 87.31% gc time)
+ Now collect thread results :                        0.002715 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3713522 →      3712386
+   Iter:    2      3712386 →      3712251
+   Iter:    3      3712251 →      3712231
+   Iter:    4      3712231 →      3712231
+   S^2 Residual   0.00784642
+   S^2 Residual   0.00623287
+   S^2 Residual   0.00776696
+   S^2 Residual   0.01330532
+ Compressing S^2 residual vector:
+   Iter:    1      7891199 →        76840
+   Iter:    2        76840 →        71339
+   Iter:    3        71339 →        70299
+   Iter:    4        70299 →        70163
+   Iter:    5        70163 →        70084
+   Iter:    6        70084 →        70058
+   Iter:    7        70058 →        70058
+ Variational space increased from:                      31022 → 472825     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            472825
+ Cache Hamiltonian:                                3978.833499 seconds (434.79 M allocations: 2.303 TiB, 72.38% gc time)
+ Iter:   1 SS: 4    E: -171.19200183  -171.19174502  -171.19129547  -171.19059398   R: 3.2e-03  2.8e-03  3.2e-03  3.6e-03   LinDep: 2.0e-15* 
+ Iter:   2 SS: 8    E: -171.19200558  -171.19174797  -171.19129942  -171.19059887   R: 1.2e-03  9.9e-04  1.3e-03  1.4e-03   LinDep: 4.7e-15* 
+ Iter:   3 SS: 12   E: -171.19200617  -171.19174839  -171.19130008  -171.19059963   R: 6.1e-04  4.8e-04  6.4e-04  7.1e-04   LinDep: 8.2e-15* 
+ Iter:   4 SS: 16   E: -171.19200631  -171.19174848  -171.19130023  -171.19059982   R: 2.8e-04  2.5e-04  3.1e-04  3.3e-04   LinDep: 2.2e-15* 
+ Iter:   5 SS: 20   E: -171.19200635  -171.19174851  -171.19130027  -171.19059987   R: 1.4e-04  1.4e-04  1.6e-04  1.7e-04   LinDep: 5.8e-15* 
+ Iter:   6 SS: 24   E: -171.19200636  -171.19174852  -171.19130028  -171.19059988   R: 8.7e-05  7.9e-05  9.5e-05  9.9e-05   LinDep: 4.2e-15* 
+ Iter:   7 SS: 28   E: -171.19200636  -171.19174852  -171.19130029  -171.19059988   R: 4.8e-05  4.2e-05  5.1e-05  5.2e-05   LinDep: 5.8e-15* 
+ Iter:   8 SS: 32   E: -171.19200636  -171.19174852  -171.19130029  -171.19059988   R: 2.6e-05  2.2e-05  2.8e-05  2.7e-05   LinDep: 1.1e-15* 
+ Iter:   9 SS: 36   E: -171.19200636  -171.19174852  -171.19130029  -171.19059988   R: 1.7e-05  1.5e-05  1.9e-05  1.8e-05   LinDep: 1.1e-15* 
+ Iter:  10 SS: 40   E: -171.19200636  -171.19174852  -171.19130029  -171.19059988   R: 1.1e-05  1.0e-05  1.3e-05  1.1e-05   LinDep: 3.8e-15* 
+ Iter:  11 SS: 44   E: -171.19200636* -171.19174852* -171.19130029* -171.19059988*  R: 7.1e-06* 7.2e-06* 8.3e-06* 7.4e-06*  LinDep: 4.0e-15* 
+ Diagonalization time:                             1205.949223 seconds
+ Compute <S^2>:                                     12.169906 seconds (17.03 M allocations: 8.219 GiB, 81.31% gc time)
+  Root       Energy           S2
+     1 -171.19200636   0.00902124
+     2 -171.19174852   2.00117384
+     3 -171.19130029   5.99150340
+     4 -171.19059988  11.99872861
+ ==================================================================|
+ E(Reference):       -171.17788916 -171.17782120 -171.17720960 -171.17631453 
+ E(PT2):             -171.19126670 -171.19106482 -171.19056457 -171.18980349 
+ E(BST):             -171.19200636 -171.19174852 -171.19130029 -171.19059988 
+
+
+
+
+ ===================================================================
+     BST Iteration:    3 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            472825 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      222.748084 seconds (24.07 M allocations: 165.960 GiB, 85.82% gc time)
+ Compute <S^2>:                                      0.138704 seconds (1.22 M allocations: 543.229 MiB)
+  Root       Energy           S2
+     1 -171.17789109   0.00931056
+     2 -171.17782206   2.00123710
+     3 -171.17720954   5.99142499
+     4 -171.17631456  11.99779837
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.041233 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            2161.129408 seconds (299.83 M allocations: 1.860 TiB, 53.08% gc time, 0.00% compilation time)
+ Now collect thread results :                        0.007945 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68495637 →     66216999
+   Iter:    2     66216999 →     65944989
+   Iter:    3     65944989 →     65893693
+   Iter:    4     65893693 →     65879035
+   Iter:    5     65879035 →     65878751
+   Iter:    6     65878751 →     65878751
+ Compute Compressed FOIS:                          2431.541712 seconds   2.13e+03 Gb
+ Total time spent building FOIS:                   2431.541712 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65878751
+ Compute <X|H|0>:                                  2883.261361 seconds   1.89e+03 Gb
+ Compute <X|F|0>:                                    1.426257 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337603
+ State   2: E(PT2) corr:                          -0.01324360
+ State   3: E(PT2) corr:                          -0.01335495
+ State   4: E(PT2) corr:                          -0.01348884
+  Root         E(0)         E(2)
+     1 -171.17789109 -171.19126712
+     2 -171.17782206 -171.19106566
+     3 -171.17720954 -171.19056449
+     4 -171.17631456 -171.18980340
+ ......................................................................................|
+ Total time spent building PT1:                    3311.557107 seconds
+ FOIS compressed from:                               65878751 → 6495082    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31024      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.645548 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.006907 seconds (31.30 k allocations: 2.554 MiB)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1065.359568 seconds (70.74 M allocations: 1.308 TiB, 87.40% gc time)
+ Now collect thread results :                        0.002835 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3735540 →      3734687
+   Iter:    2      3734687 →      3734585
+   Iter:    3      3734585 →      3734567
+   Iter:    4      3734567 →      3734567
+   S^2 Residual   0.00783376
+   S^2 Residual   0.00622546
+   S^2 Residual   0.00776703
+   S^2 Residual   0.01330070
+ Compressing S^2 residual vector:
+   Iter:    1      7928469 →        76805
+   Iter:    2        76805 →        71314
+   Iter:    3        71314 →        70273
+   Iter:    4        70273 →        70130
+   Iter:    5        70130 →        70037
+   Iter:    6        70037 →        70015
+   Iter:    7        70015 →        70015
+ Variational space increased from:                      31024 → 472790     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            472790
+ Cache Hamiltonian:                                4070.516984 seconds (435.48 M allocations: 2.309 TiB, 72.27% gc time)
+ Iter:   1 SS: 4    E: -171.19200235  -171.19174528  -171.19129578  -171.19059457   R: 3.1e-03  2.8e-03  3.2e-03  3.5e-03   LinDep: 3.6e-15* 
+ Iter:   2 SS: 8    E: -171.19200603  -171.19174792  -171.19129954  -171.19059929   R: 1.2e-03  9.1e-04  1.2e-03  1.4e-03   LinDep: 3.8e-15* 
+ Iter:   3 SS: 12   E: -171.19200658  -171.19174824  -171.19130014  -171.19060007   R: 6.1e-04  4.4e-04  6.3e-04  7.4e-04   LinDep: 2.7e-15* 
+ Iter:   4 SS: 16   E: -171.19200672  -171.19174833  -171.19130030  -171.19060028   R: 2.7e-04  2.1e-04  2.9e-04  3.4e-04   LinDep: 0.0e+00* 
+ Iter:   5 SS: 20   E: -171.19200675  -171.19174834  -171.19130034  -171.19060033   R: 1.4e-04  1.1e-04  1.5e-04  1.7e-04   LinDep: 8.9e-16* 
+ Iter:   6 SS: 24   E: -171.19200676  -171.19174835  -171.19130035  -171.19060034   R: 8.2e-05  6.5e-05  9.0e-05  9.8e-05   LinDep: 2.0e-15* 
+ Iter:   7 SS: 28   E: -171.19200677  -171.19174835  -171.19130035  -171.19060035   R: 4.6e-05  3.6e-05  5.0e-05  5.4e-05   LinDep: 6.2e-15* 
+ Iter:   8 SS: 32   E: -171.19200677  -171.19174835  -171.19130035  -171.19060035   R: 2.6e-05  2.0e-05  2.9e-05  3.0e-05   LinDep: 6.9e-15* 
+ Iter:   9 SS: 36   E: -171.19200677  -171.19174835  -171.19130035  -171.19060035   R: 1.7e-05  1.3e-05  1.9e-05  1.8e-05   LinDep: 1.6e-15* 
+ Iter:  10 SS: 40   E: -171.19200677  -171.19174835* -171.19130035  -171.19060035   R: 1.0e-05  8.0e-06* 1.2e-05  1.1e-05   LinDep: 1.6e-14* 
+ Iter:  11 SS: 44   E: -171.19200677* -171.19174835* -171.19130035* -171.19060035*  R: 6.7e-06* 5.4e-06* 8.0e-06* 7.3e-06*  LinDep: 7.3e-15* 
+ Diagonalization time:                             1207.687404 seconds
+ Compute <S^2>:                                     11.618047 seconds (17.16 M allocations: 8.223 GiB, 80.72% gc time)
+  Root       Energy           S2
+     1 -171.19200677   0.00947552
+     2 -171.19174835   2.00141919
+     3 -171.19130035   5.99100075
+     4 -171.19060035  11.99852980
+ ==================================================================|
+ E(Reference):       -171.17789109 -171.17782206 -171.17720954 -171.17631456 
+ E(PT2):             -171.19126712 -171.19106566 -171.19056449 -171.18980340 
+ E(BST):             -171.19200677 -171.19174835 -171.19130035 -171.19060035 
+
+*Converged E(Ref):             -171.17789109 -171.17782206 -171.17720954 -171.17631456 
+*Converged E(BST):             -171.19200677 -171.19174835 -171.19130035 -171.19060035 
+
+ Energies per BST iteration:
+   Projected Energies: 
+   Iter:   1   -171.17788990 -171.17782119 -171.17720902 -171.17631528 Dim:       588
+   Iter:   2   -171.17788916 -171.17782120 -171.17720960 -171.17631453 Dim:       588
+   Iter:   3   -171.17789109 -171.17782206 -171.17720954 -171.17631456 Dim:       588
+
+   Variational Energies: 
+   Iter:   1   -171.19200837 -171.19174985 -171.19130217 -171.19060173 Dim:    472930
+   Iter:   2   -171.19200636 -171.19174852 -171.19130029 -171.19059988 Dim:    472825
+   Iter:   3   -171.19200677 -171.19174835 -171.19130035 -171.19060035 Dim:    472790
+ ─────────────────────────────────────────────────────────────────────────
+                                 Time                    Allocations      
+                        ───────────────────────   ────────────────────────
+    Tot / % measured:        10.0h /  98.2%           25.4TiB /  98.1%    
+
+ Section        ncalls     time    %tot     avg     alloc    %tot      avg
+ ─────────────────────────────────────────────────────────────────────────
+ CI big              3    4.36h   44.2%   1.45h   9.20TiB   37.0%  3.07TiB
+ PT1                 3    2.66h   26.9%   3188s   5.89TiB   23.7%  1.96TiB
+ FOIS                3    1.94h   19.7%   2330s   5.82TiB   23.4%  1.94TiB
+ s2 extension        3    3221s    9.1%   1074s   3.95TiB   15.9%  1.32TiB
+   project           3    1.20s    0.0%   401ms    443MiB    0.0%   148MiB
+ compress            6    56.9s    0.2%   9.48s   20.3GiB    0.1%  3.38GiB
+ add                 3    4.10s    0.0%   1.37s   1.16GiB    0.0%   394MiB
+ S2                  3    430ms    0.0%   143ms   1.59GiB    0.0%   543MiB
+ project             3    303ms    0.0%   101ms    168MiB    0.0%  56.0MiB
+ ─────────────────────────────────────────────────────────────────────────
+ ==================================================================|
+ max_iter         : 5
+ nbody            : 4
+ H0               : Hcmf
+ thresh_var       : 0.007
+ thresh_foi       : 3.0e-5
+ thresh_pt        : 0.00095
+ thresh_spin      : 0.00095
+ ci_conv          : 1.0e-5
+ ci_max_iter      : 50
+ ci_max_ss_vecs   : 12
+ ci_lindep_thresh : 1.0e-10
+ resolve_ss       : false
+ do_pt            : true
+ tol_tucker       : 1.0e-6
+
+
+
+ ===================================================================
+     BST Iteration:    1 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            472790 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      175.720227 seconds (24.00 M allocations: 164.013 GiB, 81.35% gc time)
+ Compute <S^2>:                                      0.141356 seconds (1.21 M allocations: 542.999 MiB)
+  Root       Energy           S2
+     1 -171.17789124   0.00976448
+     2 -171.17782280   2.00148344
+     3 -171.17721084   5.99092195
+     4 -171.17631545  11.99760288
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.046131 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            1929.915635 seconds (299.24 M allocations: 1.863 TiB, 46.49% gc time)
+ Now collect thread results :                        0.008368 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68487948 →     66205416
+   Iter:    2     66205416 →     65929108
+   Iter:    3     65929108 →     65876367
+   Iter:    4     65876367 →     65861181
+   Iter:    5     65861181 →     65860881
+   Iter:    6     65860881 →     65860881
+ Compute Compressed FOIS:                          2165.917966 seconds   2.14e+03 Gb
+ Total time spent building FOIS:                   2165.917966 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65860881
+ Compute <X|H|0>:                                  2644.161854 seconds   1.89e+03 Gb
+ Compute <X|F|0>:                                    1.144337 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337571
+ State   2: E(PT2) corr:                          -0.01324236
+ State   3: E(PT2) corr:                          -0.01335349
+ State   4: E(PT2) corr:                          -0.01348792
+  Root         E(0)         E(2)
+     1 -171.17789124 -171.19126695
+     2 -171.17782280 -171.19106516
+     3 -171.17721084 -171.19056433
+     4 -171.17631545 -171.18980337
+ ......................................................................................|
+ Total time spent building PT1:                    3014.139130 seconds
+ FOIS compressed from:                               65860881 → 6497072    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31034      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.245163 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.006499 seconds (31.30 k allocations: 2.554 MiB)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1026.868498 seconds (70.82 M allocations: 1.308 TiB, 87.09% gc time)
+ Now collect thread results :                        0.002962 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3705743 →      3704897
+   Iter:    2      3704897 →      3704788
+   Iter:    3      3704788 →      3704774
+   Iter:    4      3704774 →      3704774
+   S^2 Residual   0.00784012
+   S^2 Residual   0.00623037
+   S^2 Residual   0.00777150
+   S^2 Residual   0.01330232
+ Compressing S^2 residual vector:
+   Iter:    1      7874812 →        76918
+   Iter:    2        76918 →        71388
+   Iter:    3        71388 →        70293
+   Iter:    4        70293 →        70151
+   Iter:    5        70151 →        70080
+   Iter:    6        70080 →        70053
+   Iter:    7        70053 →        70053
+ Variational space increased from:                      31034 → 472871     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            472871
+ Cache Hamiltonian:                                4035.055989 seconds (435.08 M allocations: 2.331 TiB, 72.70% gc time)
+ Iter:   1 SS: 4    E: -171.19200245  -171.19174576  -171.19129570  -171.19059431   R: 3.3e-03  3.0e-03  3.3e-03  3.6e-03   LinDep: 1.6e-15* 
+ Iter:   2 SS: 8    E: -171.19200670  -171.19174884  -171.19129984  -171.19059923   R: 1.2e-03  9.6e-04  1.2e-03  1.3e-03   LinDep: 3.8e-15* 
+ Iter:   3 SS: 12   E: -171.19200731  -171.19174920  -171.19130047  -171.19059995   R: 5.9e-04  4.6e-04  6.2e-04  6.6e-04   LinDep: 7.5e-15* 
+ Iter:   4 SS: 16   E: -171.19200744  -171.19174929  -171.19130063  -171.19060011   R: 2.8e-04  2.3e-04  3.1e-04  3.3e-04   LinDep: 6.8e-15* 
+ Iter:   5 SS: 20   E: -171.19200747  -171.19174931  -171.19130067  -171.19060016   R: 1.5e-04  1.3e-04  1.7e-04  1.7e-04   LinDep: 6.7e-15* 
+ Iter:   6 SS: 24   E: -171.19200748  -171.19174932  -171.19130068  -171.19060017   R: 8.6e-05  7.6e-05  1.0e-04  9.6e-05   LinDep: 6.7e-16* 
+ Iter:   7 SS: 28   E: -171.19200749  -171.19174932  -171.19130068  -171.19060017   R: 4.8e-05  4.2e-05  6.0e-05  5.3e-05   LinDep: 6.4e-15* 
+ Iter:   8 SS: 32   E: -171.19200749  -171.19174932  -171.19130069  -171.19060017   R: 2.7e-05  2.5e-05  3.7e-05  2.7e-05   LinDep: 6.0e-15* 
+ Iter:   9 SS: 36   E: -171.19200749  -171.19174932  -171.19130069  -171.19060017   R: 1.7e-05  1.6e-05  2.5e-05  1.6e-05   LinDep: 1.1e-15* 
+ Iter:  10 SS: 40   E: -171.19200749  -171.19174932  -171.19130069  -171.19060017*  R: 1.0e-05  1.0e-05  1.6e-05  9.7e-06*  LinDep: 4.3e-15* 
+ Iter:  11 SS: 44   E: -171.19200749* -171.19174932* -171.19130069* -171.19060017*  R: 6.3e-06* 6.6e-06* 9.8e-06* 6.1e-06*  LinDep: 1.2e-14* 
+ Diagonalization time:                             1204.156539 seconds
+ Compute <S^2>:                                     12.053740 seconds (17.13 M allocations: 8.225 GiB, 81.21% gc time)
+  Root       Energy           S2
+     1 -171.19200749   0.00878749
+     2 -171.19174932   2.00136337
+     3 -171.19130069   5.99169373
+     4 -171.19060017  11.99858420
+ ==================================================================|
+ E(Reference):       -171.17789124 -171.17782280 -171.17721084 -171.17631545 
+ E(PT2):             -171.19126695 -171.19106516 -171.19056433 -171.18980337 
+ E(BST):             -171.19200749 -171.19174932 -171.19130069 -171.19060017 
+
+
+
+
+ ===================================================================
+     BST Iteration:    2 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            472871 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      224.116291 seconds (24.00 M allocations: 163.883 GiB, 85.70% gc time)
+ Compute <S^2>:                                      0.140238 seconds (1.21 M allocations: 542.988 MiB)
+  Root       Energy           S2
+     1 -171.17789181   0.00907676
+     2 -171.17782240   2.00142723
+     3 -171.17720998   5.99161450
+     4 -171.17631572  11.99765484
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.039414 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            2126.586593 seconds (299.24 M allocations: 1.861 TiB, 53.73% gc time)
+ Now collect thread results :                        0.008560 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68423459 →     66264753
+   Iter:    2     66264753 →     65993841
+   Iter:    3     65993841 →     65941433
+   Iter:    4     65941433 →     65926171
+   Iter:    5     65926171 →     65925871
+   Iter:    6     65925871 →     65925871
+ Compute Compressed FOIS:                          2400.294831 seconds   2.13e+03 Gb
+ Total time spent building FOIS:                   2400.294831 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65925871
+ Compute <X|H|0>:                                  2878.453972 seconds   1.90e+03 Gb
+ Compute <X|F|0>:                                    1.282389 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337607
+ State   2: E(PT2) corr:                          -0.01324349
+ State   3: E(PT2) corr:                          -0.01335443
+ State   4: E(PT2) corr:                          -0.01348749
+  Root         E(0)         E(2)
+     1 -171.17789181 -171.19126788
+     2 -171.17782240 -171.19106589
+     3 -171.17720998 -171.19056442
+     4 -171.17631572 -171.18980321
+ ......................................................................................|
+ Total time spent building PT1:                    3307.004883 seconds
+ FOIS compressed from:                               65925871 → 6492964    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31041      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.975010 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.007160 seconds (31.30 k allocations: 2.554 MiB)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1053.910118 seconds (70.82 M allocations: 1.308 TiB, 86.97% gc time)
+ Now collect thread results :                        0.002821 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3730245 →      3729263
+   Iter:    2      3729263 →      3729162
+   Iter:    3      3729162 →      3729150
+   Iter:    4      3729150 →      3729150
+   S^2 Residual   0.00783147
+   S^2 Residual   0.00623550
+   S^2 Residual   0.00777375
+   S^2 Residual   0.01329609
+ Compressing S^2 residual vector:
+   Iter:    1      7919443 →        76960
+   Iter:    2        76960 →        71281
+   Iter:    3        71281 →        70255
+   Iter:    4        70255 →        70119
+   Iter:    5        70119 →        70036
+   Iter:    6        70036 →        69997
+   Iter:    7        69997 →        69997
+ Variational space increased from:                      31041 → 472689     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            472689
+ Cache Hamiltonian:                                3953.034806 seconds (434.99 M allocations: 2.301 TiB, 72.38% gc time)
+ Iter:   1 SS: 4    E: -171.19200295  -171.19174540  -171.19129591  -171.19059470   R: 3.2e-03  2.7e-03  3.2e-03  3.5e-03   LinDep: 1.0e-15* 
+ Iter:   2 SS: 8    E: -171.19200679  -171.19174808  -171.19129969  -171.19059928   R: 1.2e-03  9.8e-04  1.2e-03  1.3e-03   LinDep: 7.3e-15* 
+ Iter:   3 SS: 12   E: -171.19200741  -171.19174846  -171.19130035  -171.19060004   R: 6.3e-04  4.8e-04  6.6e-04  7.3e-04   LinDep: 1.2e-15* 
+ Iter:   4 SS: 16   E: -171.19200755  -171.19174856  -171.19130051  -171.19060025   R: 2.8e-04  2.5e-04  3.2e-04  3.7e-04   LinDep: 9.1e-15* 
+ Iter:   5 SS: 20   E: -171.19200759  -171.19174859  -171.19130056  -171.19060031   R: 1.6e-04  1.5e-04  1.9e-04  2.1e-04   LinDep: 5.6e-15* 
+ Iter:   6 SS: 24   E: -171.19200760  -171.19174860  -171.19130058  -171.19060032   R: 1.0e-04  9.9e-05  1.3e-04  1.4e-04   LinDep: 4.0e-15* 
+ Iter:   7 SS: 28   E: -171.19200760  -171.19174860  -171.19130058  -171.19060033   R: 6.1e-05  6.1e-05  7.9e-05  8.0e-05   LinDep: 4.1e-15* 
+ Iter:   8 SS: 32   E: -171.19200760  -171.19174860  -171.19130058  -171.19060034   R: 4.0e-05  4.2e-05  5.4e-05  5.2e-05   LinDep: 1.2e-15* 
+ Iter:   9 SS: 36   E: -171.19200761  -171.19174860  -171.19130059  -171.19060034   R: 2.7e-05  3.0e-05  3.8e-05  3.7e-05   LinDep: 8.9e-16* 
+ Iter:  10 SS: 40   E: -171.19200761  -171.19174860  -171.19130059  -171.19060034   R: 1.7e-05  1.9e-05  2.3e-05  2.3e-05   LinDep: 2.7e-15* 
+ Iter:  11 SS: 44   E: -171.19200761  -171.19174860  -171.19130059  -171.19060034   R: 1.0e-05  1.2e-05  1.3e-05  1.3e-05   LinDep: 2.9e-15* 
+ Iter:  12 SS: 48   E: -171.19200761* -171.19174860* -171.19130059* -171.19060034*  R: 6.0e-06* 6.7e-06* 7.7e-06* 7.4e-06*  LinDep: 9.1e-15* 
+ Diagonalization time:                             1319.116515 seconds
+ Compute <S^2>:                                     12.700707 seconds (17.14 M allocations: 8.221 GiB, 81.58% gc time)
+  Root       Energy           S2
+     1 -171.19200761   0.00952113
+     2 -171.19174860   2.00145851
+     3 -171.19130059   5.99095817
+     4 -171.19060034  11.99848573
+ ==================================================================|
+ E(Reference):       -171.17789181 -171.17782240 -171.17720998 -171.17631572 
+ E(PT2):             -171.19126788 -171.19106589 -171.19056442 -171.18980321 
+ E(BST):             -171.19200761 -171.19174860 -171.19130059 -171.19060034 
+
+*Converged E(Ref):             -171.17789181 -171.17782240 -171.17720998 -171.17631572 
+*Converged E(BST):             -171.19200761 -171.19174860 -171.19130059 -171.19060034 
+
+ Energies per BST iteration:
+   Projected Energies: 
+   Iter:   1   -171.17789124 -171.17782280 -171.17721084 -171.17631545 Dim:       588
+   Iter:   2   -171.17789181 -171.17782240 -171.17720998 -171.17631572 Dim:       588
+
+   Variational Energies: 
+   Iter:   1   -171.19200749 -171.19174932 -171.19130069 -171.19060017 Dim:    472871
+   Iter:   2   -171.19200761 -171.19174860 -171.19130059 -171.19060034 Dim:    472689
+ ─────────────────────────────────────────────────────────────────────────
+                                 Time                    Allocations      
+                        ───────────────────────   ────────────────────────
+    Tot / % measured:        6.67h /  98.3%           17.0TiB /  98.1%    
+
+ Section        ncalls     time    %tot     avg     alloc    %tot      avg
+ ─────────────────────────────────────────────────────────────────────────
+ CI big              2    2.93h   44.7%   1.46h   6.20TiB   37.2%  3.10TiB
+ PT1                 2    1.76h   26.8%   3161s   3.94TiB   23.6%  1.97TiB
+ FOIS                2    1.27h   19.4%   2283s   3.88TiB   23.3%  1.94TiB
+ s2 extension        2    2124s    9.0%   1062s   2.63TiB   15.8%  1.32TiB
+   project           2    972ms    0.0%   486ms    295MiB    0.0%   148MiB
+ compress            4    37.1s    0.2%   9.28s   13.5GiB    0.1%  3.38GiB
+ add                 2    2.61s    0.0%   1.31s    789MiB    0.0%   394MiB
+ S2                  2    282ms    0.0%   141ms   1.06GiB    0.0%   543MiB
+ project             2    194ms    0.0%  96.8ms    112MiB    0.0%  56.2MiB
+ ─────────────────────────────────────────────────────────────────────────
+ ==================================================================|
+ max_iter         : 5
+ nbody            : 4
+ H0               : Hcmf
+ thresh_var       : 0.007
+ thresh_foi       : 3.0e-5
+ thresh_pt        : 0.00095
+ thresh_spin      : 0.00095
+ ci_conv          : 1.0e-5
+ ci_max_iter      : 50
+ ci_max_ss_vecs   : 12
+ ci_lindep_thresh : 1.0e-10
+ resolve_ss       : false
+ do_pt            : true
+ tol_tucker       : 1.0e-6
+
+
+
+ ===================================================================
+     BST Iteration:    1 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            472689 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      176.013576 seconds (24.00 M allocations: 166.392 GiB, 81.59% gc time)
+ Compute <S^2>:                                      0.142166 seconds (1.21 M allocations: 542.998 MiB)
+  Root       Energy           S2
+     1 -171.17789128   0.00981389
+     2 -171.17782275   2.00152400
+     3 -171.17721117   5.99088149
+     4 -171.17631638  11.99755804
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.039778 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            1933.173569 seconds (299.24 M allocations: 1.863 TiB, 46.28% gc time)
+ Now collect thread results :                        0.008271 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68421595 →     66259952
+   Iter:    2     66259952 →     65976881
+   Iter:    3     65976881 →     65924955
+   Iter:    4     65924955 →     65910441
+   Iter:    5     65910441 →     65910141
+   Iter:    6     65910141 →     65910141
+ Compute Compressed FOIS:                          2157.907041 seconds   2.13e+03 Gb
+ Total time spent building FOIS:                   2157.907041 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65910141
+ Compute <X|H|0>:                                  2683.295398 seconds   1.89e+03 Gb
+ Compute <X|F|0>:                                    1.083000 seconds   1.31e+00 Gb
+ State   1: E(PT2) corr:                          -0.01337677
+ State   2: E(PT2) corr:                          -0.01324341
+ State   3: E(PT2) corr:                          -0.01335355
+ State   4: E(PT2) corr:                          -0.01348675
+  Root         E(0)         E(2)
+     1 -171.17789128 -171.19126805
+     2 -171.17782275 -171.19106616
+     3 -171.17721117 -171.19056472
+     4 -171.17631638 -171.18980313
+ ......................................................................................|
+ Total time spent building PT1:                    3058.231769 seconds
+ FOIS compressed from:                               65910141 → 6493851    (thresh_foi  =  3.0e-05)
+
+ Variational space increased from:                        588 → 31025      (thresh_pt   =  9.5e-04)
+ Add new space to variational space:                 3.207166 seconds
+
+ Perform S^2 Spin Extension.
+ Computing S^2 residual vector:
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.035326 seconds (31.30 k allocations: 2.554 MiB, 78.67% gc time)
+ Number of tasks:                                        6484
+ Compute matrix-vector:                            1034.364278 seconds (70.72 M allocations: 1.307 TiB, 87.02% gc time)
+ Now collect thread results :                        0.002841 seconds (12.99 k allocations: 917.156 KiB)
+ Compressing final σ vector:
+   Iter:    1      3716842 →      3716148
+   Iter:    2      3716148 →      3716046
+   Iter:    3      3716046 →      3716032
+   Iter:    4      3716032 →      3716032
+   S^2 Residual   0.00784196
+   S^2 Residual   0.00623736
+   S^2 Residual   0.00777145
+   S^2 Residual   0.01329672
+ Compressing S^2 residual vector:
+   Iter:    1      7893651 →        76965
+   Iter:    2        76965 →        71393
+   Iter:    3        71393 →        70310
+   Iter:    4        70310 →        70157
+   Iter:    5        70157 →        70071
+   Iter:    6        70071 →        70046
+   Iter:    7        70046 →        70046
+ Variational space increased from:                      31025 → 472739     (thresh_spin =  9.5e-04)
+ |== BST CI ========================================================
+ Solve CI with # variables:                            472739
+ Cache Hamiltonian:                                3996.229936 seconds (435.18 M allocations: 2.325 TiB, 72.34% gc time)
+ Iter:   1 SS: 4    E: -171.19200358  -171.19174621  -171.19129639  -171.19059449   R: 3.3e-03  3.3e-03  3.4e-03  3.5e-03   LinDep: 1.9e-15* 
+ Iter:   2 SS: 8    E: -171.19200735  -171.19174969  -171.19130038  -171.19059892   R: 1.2e-03  1.2e-03  1.3e-03  1.3e-03   LinDep: 4.2e-15* 
+ Iter:   3 SS: 12   E: -171.19200795  -171.19175026  -171.19130111  -171.19059963   R: 6.0e-04  5.6e-04  6.7e-04  7.0e-04   LinDep: 4.3e-15* 
+ Iter:   4 SS: 16   E: -171.19200810  -171.19175041  -171.19130130  -171.19059983   R: 2.8e-04  2.8e-04  3.3e-04  3.7e-04   LinDep: 2.4e-15* 
+ Iter:   5 SS: 20   E: -171.19200814  -171.19175045  -171.19130135  -171.19059989   R: 1.6e-04  1.6e-04  1.9e-04  2.0e-04   LinDep: 4.6e-15* 
+ Iter:   6 SS: 24   E: -171.19200815  -171.19175046  -171.19130136  -171.19059990   R: 9.7e-05  9.6e-05  1.1e-04  1.2e-04   LinDep: 6.7e-16* 
+ Iter:   7 SS: 28   E: -171.19200815  -171.19175046  -171.19130137  -171.19059991   R: 5.8e-05  5.8e-05  6.8e-05  7.5e-05   LinDep: 3.6e-15* 
+ Iter:   8 SS: 32   E: -171.19200815  -171.19175046  -171.19130137  -171.19059991   R: 3.6e-05  3.8e-05  4.5e-05  4.8e-05   LinDep: 1.8e-15* 
+ Iter:   9 SS: 36   E: -171.19200815  -171.19175046  -171.19130137  -171.19059991   R: 2.6e-05  2.6e-05  3.2e-05  3.5e-05   LinDep: 7.1e-15* 
+ Iter:  10 SS: 40   E: -171.19200815  -171.19175046  -171.19130137  -171.19059991   R: 1.7e-05  1.8e-05  2.2e-05  2.2e-05   LinDep: 1.5e-14* 
+ Iter:  11 SS: 44   E: -171.19200815  -171.19175046  -171.19130137  -171.19059992   R: 1.1e-05  1.2e-05  1.3e-05  1.3e-05   LinDep: 5.4e-15* 
+ Iter:  12 SS: 48   E: -171.19200815* -171.19175046* -171.19130137* -171.19059992*  R: 6.2e-06* 6.9e-06* 7.8e-06* 7.6e-06*  LinDep: 4.4e-15* 
+ Diagonalization time:                             1310.922132 seconds
+ Compute <S^2>:                                     12.565308 seconds (17.15 M allocations: 8.223 GiB, 80.77% gc time)
+  Root       Energy           S2
+     1 -171.19200815   0.00850653
+     2 -171.19175046   2.00132807
+     3 -171.19130137   5.99194781
+     4 -171.19059992  11.99864292
+ ==================================================================|
+ E(Reference):       -171.17789128 -171.17782275 -171.17721117 -171.17631638 
+ E(PT2):             -171.19126805 -171.19106616 -171.19056472 -171.18980313 
+ E(BST):             -171.19200815 -171.19175046 -171.19130137 -171.19059992 
+
+
+
+
+ ===================================================================
+     BST Iteration:    2 epsilon:   0.00700000
+ ===================================================================
+ Ref state compressed from:                            472739 → 588        (thresh_var  =  7.0e-03)
+ Compute zeroth-order energy:                      221.547204 seconds (24.00 M allocations: 165.641 GiB, 85.44% gc time)
+ Compute <S^2>:                                      0.138896 seconds (1.21 M allocations: 542.995 MiB)
+  Root       Energy           S2
+     1 -171.17789284   0.00879723
+     2 -171.17782353   2.00139163
+     3 -171.17721015   5.99186951
+     4 -171.17631663  11.99771395
+
+ In build_compressed_1st_order_state
+ Setup threaded jobs:                                0.046623 seconds (148.91 k allocations: 11.738 MiB)
+ Number of tasks:                                       22516
+ Compute matrix-vector:                            2125.812527 seconds (299.25 M allocations: 1.861 TiB, 53.69% gc time)
+ Now collect thread results :                        0.007979 seconds (45.06 k allocations: 2.823 MiB)
+ Compressing final σ vector:
+   Iter:    1     68406086 →     66283595
+   Iter:    2     66283595 →     66019272
+   Iter:    3     66019272 →     65964692
+   Iter:    4     65964692 →     65951346
+   Iter:    5     65951346 →     65951046
+   Iter:    6     65951046 →     65951046
+ Compute Compressed FOIS:                          2392.496747 seconds   2.13e+03 Gb
+ Total time spent building FOIS:                   2392.496747 seconds
+
+ Compute PT1 wavefunction. Reference space dim:           588
+
+ |...................................BST-PT2............................................
+ Length of input      FOIS:                          65951046
