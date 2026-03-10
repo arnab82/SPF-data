@@ -44,19 +44,19 @@ println()
 v_var_=deepcopy(v_var)
 time = @elapsed begin
     dim1 = length(v_var_)
-    @timeit to "add" nonorth_add!(v_var_, σ)
-    @timeit to "compress" v_var_ = compress(v_var_, thresh=1e-9)
+    @timeit to "add" FermiCG.nonorth_add!(v_var_, σ)
+    @timeit to "compress" v_var_ = FermiCG.compress(v_var_, thresh=1e-9)
     dim2 = length(v_var_)
     @printf(" %-50s", "Variational space increased from: ")
     @printf("%10i → %-10i (%-11s = %8.1e)\n", dim1, dim2, "thresh_pt", 1e-9)
-    orthonormalize!(v_var_)
+    FermiCG.orthonormalize!(v_var_)
 end
 H2 = FermiCG.orth_dot(v_var_, v_var_)
 var1 = zeros(length(e_var1))
 for r in 1:length(e_var1)
     var1[r] = H2[1] - e_var1[r] * e_var1[r]
 end
-@printf("Variance, Energy: %1.5e, %1.5e\n", var1[1], e_var1[1])
+@printf("Variance, Energy: %1.5e, %1.8e\n", var1[1], e_var1[1])
 
 thresh_spf=0.008
 e_var2, v_var = FermiCG.block_sparse_tucker(v_var, cluster_ops, clustered_ham,
@@ -82,25 +82,25 @@ println()
 v_var_=deepcopy(v_var)
 time = @elapsed begin
     dim1 = length(v_var_)
-    @timeit to "add" nonorth_add!(v_var_, σ)
-    @timeit to "compress" v_var_ = compress(v_var_, thresh=1e-9)
+    @timeit to "add" FermiCG.nonorth_add!(v_var_, σ)
+    @timeit to "compress" v_var_ = FermiCG.compress(v_var_, thresh=1e-9)
     dim2 = length(v_var_)
     @printf(" %-50s", "Variational space increased from: ")
     @printf("%10i → %-10i (%-11s = %8.1e)\n", dim1, dim2, "thresh_pt", 1e-9)
-    orthonormalize!(v_var_)
+    FermiCG.orthonormalize!(v_var_)
 end
 H2 = FermiCG.orth_dot(v_var_, v_var_)
 var2 = zeros(length(e_var2))
 for r in 1:length(e_var2)
     var2[r] = H2[1] - e_var2[r] * e_var2[r]
 end
-@printf("Variance, Energy: %1.5e, %1.5e\n", var2[1], e_var2[1])
+@printf("Variance, Energy: %1.5e, %1.8e\n", var2[1], e_var2[1])
 
 
 
 thresh_spf=0.006
 e_var3, v_var = FermiCG.block_sparse_tucker(v_var, cluster_ops, clustered_ham,
-                                               max_iter    = 10,
+                                               max_iter    = 20 ,
                                                nbody       = 4,
                                                H0          = "Hcmf",
                                                thresh_var  = thresh_spf,
@@ -122,25 +122,25 @@ println()
 v_var_=deepcopy(v_var)
 time = @elapsed begin
     dim1 = length(v_var_)
-    @timeit to "add" nonorth_add!(v_var_, σ)
-    @timeit to "compress" v_var_ = compress(v_var_, thresh=1e-9)
+    @timeit to "add" FermiCG.nonorth_add!(v_var_, σ)
+    @timeit to "compress" v_var_ = FermiCG.compress(v_var_, thresh=1e-9)
     dim2 = length(v_var_)
     @printf(" %-50s", "Variational space increased from: ")
     @printf("%10i → %-10i (%-11s = %8.1e)\n", dim1, dim2, "thresh_pt", 1e-9)
-    orthonormalize!(v_var_)
+    FermiCG.orthonormalize!(v_var_)
 end
 H2 = FermiCG.orth_dot(v_var_, v_var_)
 var3 = zeros(length(e_var3))
 for r in 1:length(e_var3)
     var3[r] = H2[1] - e_var3[r] * e_var3[r]
 end
-@printf("Variance, Energy: %1.5e, %1.5e\n", var3[1], e_var3[1])
+@printf("Variance, Energy: %1.5e, %1.8e\n", var3[1], e_var3[1])
 
 
 
 thresh_spf=0.004
 e_var4, v_var = FermiCG.block_sparse_tucker(v_var, cluster_ops, clustered_ham,
-                                               max_iter    = 10,
+                                               max_iter    = 20,
                                                nbody       = 4,
                                                H0          = "Hcmf",
                                                thresh_var  = thresh_spf,
@@ -162,23 +162,23 @@ println()
 v_var_=deepcopy(v_var)
 time = @elapsed begin
     dim1 = length(v_var_)
-    @timeit to "add" nonorth_add!(v_var_, σ)
-    @timeit to "compress" v_var_ = compress(v_var_, thresh=1e-9)
+    @timeit to "add" FermiCG.nonorth_add!(v_var_, σ)
+    @timeit to "compress" v_var_ = FermiCG.compress(v_var_, thresh=1e-9)
     dim2 = length(v_var_)
     @printf(" %-50s", "Variational space increased from: ")
     @printf("%10i → %-10i (%-11s = %8.1e)\n", dim1, dim2, "thresh_pt", 1e-9)
-    orthonormalize!(v_var_)
+    FermiCG.orthonormalize!(v_var_)
 end
 H2 = FermiCG.orth_dot(v_var_, v_var_)
 var4 = zeros(length(e_var4))
 for r in 1:length(e_var4)
     var4[r] = H2[1] - e_var4[r] * e_var4[r]
 end
-@printf("Variance, Energy: %1.5e, %1.5e\n", var4[1], e_var4[1])
+@printf("Variance, Energy: %1.5e, %1.8e\n", var4[1], e_var4[1])
 
 thresh_spf=0.002
 e_var5, v_var = FermiCG.block_sparse_tucker(v_var, cluster_ops, clustered_ham,
-                                               max_iter    = 10,
+                                               max_iter    = 20,
                                                nbody       = 4,
                                                H0          = "Hcmf",
                                                thresh_var  = thresh_spf,
@@ -200,25 +200,25 @@ println()
 v_var_=deepcopy(v_var)
 time = @elapsed begin
     dim1 = length(v_var_)
-    @timeit to "add" nonorth_add!(v_var_, σ)
-    @timeit to "compress" v_var_ = compress(v_var_, thresh=1e-9)
+    @timeit to "add" FermiCG.nonorth_add!(v_var_, σ)
+    @timeit to "compress" v_var_ = FermiCG.compress(v_var_, thresh=1e-9)
     dim2 = length(v_var_)
     @printf(" %-50s", "Variational space increased from: ")
     @printf("%10i → %-10i (%-11s = %8.1e)\n", dim1, dim2, "thresh_pt", 1e-9)
-    orthonormalize!(v_var_)
+    FermiCG.orthonormalize!(v_var_)
 end
 H2 = FermiCG.orth_dot(v_var_, v_var_)
 var5 = zeros(length(e_var5))
 for r in 1:length(e_var5)
     var5[r] = H2[1] - e_var5[r] * e_var5[r]
 end
-@printf("Variance, Energy: %1.5e, %1.5e\n", var5[1], e_var5[1])
+@printf("Variance, Energy: %1.5e, %1.8e\n", var5[1], e_var5[1])
 
 
 
 thresh_spf=0.0015
 e_var6, v_var = FermiCG.block_sparse_tucker(v_var, cluster_ops, clustered_ham,
-                                               max_iter    = 10,
+                                               max_iter    = 20,
                                                nbody       = 4,
                                                H0          = "Hcmf",
                                                thresh_var  = thresh_spf,
@@ -240,19 +240,19 @@ println()
 v_var_=deepcopy(v_var)
 time = @elapsed begin
     dim1 = length(v_var_)
-    @timeit to "add" nonorth_add!(v_var_, σ)
-    @timeit to "compress" v_var_ = compress(v_var_, thresh=1e-9)
+    @timeit to "add" FermiCG.nonorth_add!(v_var_, σ)
+    @timeit to "compress" v_var_ = FermiCG.compress(v_var_, thresh=1e-9)
     dim2 = length(v_var_)
     @printf(" %-50s", "Variational space increased from: ")
     @printf("%10i → %-10i (%-11s = %8.1e)\n", dim1, dim2, "thresh_pt", 1e-9)
-    orthonormalize!(v_var_)
+    FermiCG.orthonormalize!(v_var_)
 end
 H2 = FermiCG.orth_dot(v_var_, v_var_)
 var6 = zeros(length(e_var6))
 for r in 1:length(e_var6)
     var6[r] = H2[1] - e_var6[r] * e_var6[r]
 end
-@printf("Variance, Energy: %1.5e, %1.5e\n", var6[1], e_var6[1])
+@printf("Variance, Energy: %1.5e, %1.8e\n", var6[1], e_var6[1])
 thresh_spf=0.001
 e_var7, v_var = FermiCG.block_sparse_tucker(v_var, cluster_ops, clustered_ham,
                                                max_iter    = 10,
@@ -276,19 +276,19 @@ println()
 v_var_=deepcopy(v_var)
 time = @elapsed begin
     dim1 = length(v_var_)
-    @timeit to "add" nonorth_add!(v_var_, σ)
-    @timeit to "compress" v_var_ = compress(v_var_, thresh=1e-9)
+    @timeit to "add" FermiCG.nonorth_add!(v_var_, σ)
+    @timeit to "compress" v_var_ = FermiCG.compress(v_var_, thresh=1e-9)
     dim2 = length(v_var_)
     @printf(" %-50s", "Variational space increased from: ")
     @printf("%10i → %-10i (%-11s = %8.1e)\n", dim1, dim2, "thresh_pt", 1e-9)
-    orthonormalize!(v_var_)
+    FermiCG.orthonormalize!(v_var_)
 end
 H2 = FermiCG.orth_dot(v_var_, v_var_)
 var7 = zeros(length(e_var7))
 for r in 1:length(e_var7)
     var7[r] = H2[1] - e_var7[r] * e_var7[r]
 end
-@printf("Variance, Energy: %1.5e, %1.5e\n", var7[1], e_var7[1])
+@printf("Variance, Energy: %1.5e, %1.8e\n", var7[1], e_var7[1])
 
 
 println("Variance, Energy")
